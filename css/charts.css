@@ -1,0 +1,63 @@
+/* ═══════════════════════════════════════════════════════════
+   CrowdSense AI — Charts Stylesheet
+   Chart card wrappers and canvas containers
+   ═══════════════════════════════════════════════════════════ */
+
+.chart-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all var(--transition-normal);
+}
+
+.chart-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(255,255,255,0.08);
+}
+
+.chart-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.chart-card__header h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chart-card__header h4 i {
+    color: var(--primary-light);
+    font-size: 0.85rem;
+}
+
+.chart-card__meta {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.chart-card__body {
+    padding: var(--space-md);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 220px;
+}
+
+.chart-card__body canvas {
+    width: 100% !important;
+    max-height: 200px;
+}
