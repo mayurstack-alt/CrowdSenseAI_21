@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrowdSense AI — Report Crowd</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="app">
+        <button class="sidebar__hamburger" id="sidebar-hamburger"><i class="fas fa-bars"></i></button>
+        <div class="sidebar__overlay" id="sidebar-overlay"></div>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__logo"><div class="sidebar__logo-icon"><i class="fas fa-brain"></i></div><div class="sidebar__logo-text"><h2>CrowdSense AI</h2><span>Citizen Portal</span></div></div>
+            <nav class="sidebar__nav">
+                <div class="sidebar__nav-group"><div class="sidebar__nav-group-title">Navigation</div>
+                    <a class="sidebar__nav-item" href="home.html" data-ripple><i class="fas fa-home"></i><span>Home</span></a>
+                    <a class="sidebar__nav-item" href="nearby-risk.html" data-ripple><i class="fas fa-map-marker-alt"></i><span>Nearby Risk</span></a>
+                    <a class="sidebar__nav-item" href="events.html" data-ripple><i class="fas fa-calendar-alt"></i><span>Events</span></a>
+                    <a class="sidebar__nav-item sidebar__nav-item--active" href="report-crowd.html" data-ripple><i class="fas fa-bullhorn"></i><span>Report Crowd</span></a>
+                    <a class="sidebar__nav-item" href="safety.html" data-ripple><i class="fas fa-shield-alt"></i><span>Safety Tips</span></a>
+                </div>
+                <div class="sidebar__nav-group"><div class="sidebar__nav-group-title">Account</div>
+                    <a class="sidebar__nav-item" href="profile.html" data-ripple><i class="fas fa-user"></i><span>Profile</span></a>
+                </div>
+                <div class="sidebar__status"><div class="sidebar__status-dot"></div><span>All Systems Operational</span></div>
+            </nav>
+            <div class="sidebar__footer"><a class="sidebar__nav-item" href="../login.html" data-ripple><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></div>
+        </aside>
+
+        <main class="main-content">
+            <header class="navbar">
+                <div class="navbar__left"><div class="navbar__breadcrumb"><i class="fas fa-brain" style="color:var(--primary-light);"></i><span>Citizen Portal</span><i class="fas fa-chevron-right"></i>Report Crowd</div></div>
+                <div class="navbar__search"><i class="fas fa-search"></i><input type="text" placeholder="Search..."></div>
+                <div class="navbar__right">
+                    <button class="navbar__icon-btn" data-ripple><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+                    <div class="navbar__datetime"><span class="time" id="navbar-time">--:--:--</span><span class="date" id="navbar-date">---</span></div>
+                    <div class="navbar__profile"><div class="navbar__profile-avatar">RK</div><div class="navbar__profile-info"><span class="name">Rahul Kumar</span><span class="role">Citizen</span></div></div>
+                </div>
+            </header>
+
+            <section class="dashboard">
+                <div class="page-header"><h2 class="page-header__title"><i class="fas fa-bullhorn"></i> Report Crowd Situation</h2></div>
+
+                <div class="report-form-card animate-on-scroll">
+                    <h3 class="report-form-card__title"><i class="fas fa-edit"></i> Submit Crowd Report</h3>
+
+                    <form id="report-form" onsubmit="return false;">
+                        <div class="form-group">
+                            <label class="form-group__label">Location</label>
+                            <div class="form-group__input-wrap">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" class="form-group__input" id="report-location" placeholder="Enter location or area name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-group__label">Estimated Crowd Size</label>
+                            <div class="form-group__input-wrap">
+                                <i class="fas fa-users"></i>
+                                <select class="form-group__select" id="report-crowd" required>
+                                    <option value="" disabled selected>Select estimated crowd</option>
+                                    <option value="small">Small (< 100 people)</option>
+                                    <option value="medium">Medium (100 — 500 people)</option>
+                                    <option value="large">Large (500 — 1,000 people)</option>
+                                    <option value="very-large">Very Large (1,000 — 5,000 people)</option>
+                                    <option value="massive">Massive (> 5,000 people)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-group__label">Description</label>
+                            <textarea class="form-group__textarea" id="report-desc" placeholder="Describe the crowd situation, any concerns, or unusual activity..." rows="4"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-group__label">Upload Image (Optional)</label>
+                            <label class="form-group__file" id="file-upload">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Click to upload or drag & drop</span>
+                                <span style="display:block;font-size:0.7rem;color:#374151;margin-top:4px;">PNG, JPG up to 10MB</span>
+                                <input type="file" accept="image/*" style="display:none;" id="report-image">
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--lg" style="margin-top: 8px;" id="submit-report-btn">
+                            <i class="fas fa-paper-plane"></i> Submit Report
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <footer class="footer"><div class="footer__content"><div class="footer__logo"><i class="fas fa-brain"></i> CrowdSense AI</div><div class="footer__divider"></div><span class="footer__text">Citizen Portal · Version 1.0 &copy; 2026</span></div></footer>
+        </main>
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/citizen-pages.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { Common.initPage(); CitizenPages.initReportCrowd(); });</script>
+</body>
+</html>

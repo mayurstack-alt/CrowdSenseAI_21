@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for CrowdSense AI — Smart City Crowd Intelligence Platform">
+    <title>CrowdSense AI — Register</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+    <div class="auth-page">
+        <!-- ─── Left: Brand Panel ─── -->
+        <div class="auth-page__left">
+            <div class="auth-left__content">
+                <div class="auth-left__logo">
+                    <div class="auth-left__logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span class="auth-left__logo-text">CrowdSense AI</span>
+                </div>
+
+                <div class="auth-left__illustration">
+                    <i class="fas fa-users"></i>
+                </div>
+
+                <h2 class="auth-left__title">Join the Platform</h2>
+                <p class="auth-left__desc">
+                    Create your account to access real-time crowd intelligence, safety alerts, and community-powered crowd monitoring for your city.
+                </p>
+            </div>
+        </div>
+
+        <!-- ─── Right: Register Card ─── -->
+        <div class="auth-page__right">
+            <div class="auth-card">
+                <div class="auth-card__header">
+                    <h1 class="auth-card__title">Create Account</h1>
+                    <p class="auth-card__subtitle">Register for CrowdSense AI platform</p>
+                </div>
+
+                <form id="register-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label class="form-group__label">Full Name</label>
+                        <div class="form-group__input-wrap">
+                            <i class="fas fa-user"></i>
+                            <input type="text" class="form-group__input" id="reg-name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label">Email Address</label>
+                        <div class="form-group__input-wrap">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" class="form-group__input" id="reg-email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label">Phone Number</label>
+                        <div class="form-group__input-wrap">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" class="form-group__input" id="reg-phone" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label">Password</label>
+                        <div class="form-group__input-wrap">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" class="form-group__input" id="reg-password" placeholder="Create a password" required>
+                            <button type="button" class="form-group__toggle-pw" onclick="togglePassword('reg-password', this)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label">Confirm Password</label>
+                        <div class="form-group__input-wrap">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" class="form-group__input" id="reg-confirm" placeholder="Confirm your password" required>
+                            <button type="button" class="form-group__toggle-pw" onclick="togglePassword('reg-confirm', this)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label">Role</label>
+                        <div class="form-group__input-wrap">
+                            <i class="fas fa-user-tag"></i>
+                            <select class="form-group__select" id="reg-role" required>
+                                <option value="" disabled selected>Select your role</option>
+                                <option value="citizen">Citizen</option>
+                                <option value="authority">Authority</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full btn--lg" id="register-btn" style="margin-top: 8px;">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
+                </form>
+
+                <div class="auth-card__footer">
+                    Already have an account? <a href="login.html">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

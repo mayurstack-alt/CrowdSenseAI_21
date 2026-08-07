@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrowdSense AI — Alerts</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="app">
+        <button class="sidebar__hamburger" id="sidebar-hamburger"><i class="fas fa-bars"></i></button>
+        <div class="sidebar__overlay" id="sidebar-overlay"></div>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__logo"><div class="sidebar__logo-icon"><i class="fas fa-brain"></i></div><div class="sidebar__logo-text"><h2>CrowdSense AI</h2><span>Smart City Platform</span></div></div>
+            <nav class="sidebar__nav">
+                <div class="sidebar__nav-group"><div class="sidebar__nav-group-title">Main</div>
+                    <a class="sidebar__nav-item" href="dashboard.html" data-ripple><i class="fas fa-th-large"></i><span>Dashboard</span></a>
+                    <a class="sidebar__nav-item" href="heatmap.html" data-ripple><i class="fas fa-map-marked-alt"></i><span>Crowd Heatmap</span></a>
+                    <a class="sidebar__nav-item" href="events.html" data-ripple><i class="fas fa-calendar-alt"></i><span>Events</span></a>
+                    <a class="sidebar__nav-item" href="analytics.html" data-ripple><i class="fas fa-chart-bar"></i><span>Analytics</span></a>
+                </div>
+                <div class="sidebar__nav-group"><div class="sidebar__nav-group-title">Intelligence</div>
+                    <a class="sidebar__nav-item" href="recommendations.html" data-ripple><i class="fas fa-robot"></i><span>AI Recommendations</span></a>
+                    <a class="sidebar__nav-item sidebar__nav-item--active" href="alerts.html" data-ripple><i class="fas fa-exclamation-circle"></i><span>Alerts</span></a>
+                    <a class="sidebar__nav-item" href="reports.html" data-ripple><i class="fas fa-file-alt"></i><span>Reports</span></a>
+                </div>
+                <div class="sidebar__nav-group"><div class="sidebar__nav-group-title">System</div>
+                    <a class="sidebar__nav-item" href="settings.html" data-ripple><i class="fas fa-cog"></i><span>Settings</span></a>
+                </div>
+                <div class="sidebar__status"><div class="sidebar__status-dot"></div><span>All Systems Operational</span></div>
+            </nav>
+            <div class="sidebar__footer"><a class="sidebar__nav-item" href="../login.html" data-ripple><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></div>
+        </aside>
+
+        <main class="main-content">
+            <header class="navbar">
+                <div class="navbar__left"><div class="navbar__breadcrumb"><i class="fas fa-brain" style="color:var(--primary-light);"></i><span>Command Center</span><i class="fas fa-chevron-right"></i>Alerts</div></div>
+                <div class="navbar__search"><i class="fas fa-search"></i><input type="text" placeholder="Search alerts..." id="alert-search"></div>
+                <div class="navbar__right">
+                    <button class="navbar__icon-btn" data-ripple><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+                    <div class="navbar__datetime"><span class="time" id="navbar-time">--:--:--</span><span class="date" id="navbar-date">---</span></div>
+                    <div class="navbar__profile"><div class="navbar__profile-avatar">AK</div><div class="navbar__profile-info"><span class="name">Amit Kumar</span><span class="role">City Admin</span></div></div>
+                </div>
+            </header>
+
+            <section class="dashboard">
+                <div class="page-header">
+                    <h2 class="page-header__title"><i class="fas fa-bell"></i> Notification Center</h2>
+                    <div class="page-header__actions">
+                        <button class="btn btn--outline btn--sm"><i class="fas fa-check-double"></i> Mark All Read</button>
+                    </div>
+                </div>
+
+                <div class="filter-bar">
+                    <button class="alerts-panel__filter-btn alerts-panel__filter-btn--active" data-filter="all">All</button>
+                    <button class="alerts-panel__filter-btn" data-filter="critical" style="color: #EF4444;">Critical</button>
+                    <button class="alerts-panel__filter-btn" data-filter="high" style="color: #F97316;">High</button>
+                    <button class="alerts-panel__filter-btn" data-filter="medium" style="color: #F59E0B;">Medium</button>
+                    <button class="alerts-panel__filter-btn" data-filter="low" style="color: #22C55E;">Low</button>
+                </div>
+
+                <div class="section-header"><h3><i class="fas fa-clock"></i> Recent Alerts</h3></div>
+                <div id="alerts-list"></div>
+
+                <div class="section-header" style="margin-top: 32px;"><h3><i class="fas fa-history"></i> Alert History</h3></div>
+                <div class="data-table">
+                    <div class="data-table__header"><h3><i class="fas fa-list"></i> Historical Alerts</h3></div>
+                    <table>
+                        <thead>
+                            <tr><th>Date</th><th>Time</th><th>Location</th><th>Risk</th><th>Description</th><th>Status</th></tr>
+                        </thead>
+                        <tbody id="alert-history-tbody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <footer class="footer"><div class="footer__content"><div class="footer__logo"><i class="fas fa-brain"></i> CrowdSense AI</div><div class="footer__divider"></div><span class="footer__text">Version 1.0 &copy; 2026</span></div></footer>
+        </main>
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/authority-pages.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { Common.initPage(); AuthorityPages.initAlerts(); });</script>
+</body>
+</html>

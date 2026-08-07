@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrowdSense AI — Analytics</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/charts.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="app">
+        <button class="sidebar__hamburger" id="sidebar-hamburger"><i class="fas fa-bars"></i></button>
+        <div class="sidebar__overlay" id="sidebar-overlay"></div>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__logo">
+                <div class="sidebar__logo-icon"><i class="fas fa-brain"></i></div>
+                <div class="sidebar__logo-text"><h2>CrowdSense AI</h2><span>Smart City Platform</span></div>
+            </div>
+            <nav class="sidebar__nav">
+                <div class="sidebar__nav-group">
+                    <div class="sidebar__nav-group-title">Main</div>
+                    <a class="sidebar__nav-item" href="dashboard.html" data-ripple><i class="fas fa-th-large"></i><span>Dashboard</span></a>
+                    <a class="sidebar__nav-item" href="heatmap.html" data-ripple><i class="fas fa-map-marked-alt"></i><span>Crowd Heatmap</span></a>
+                    <a class="sidebar__nav-item" href="events.html" data-ripple><i class="fas fa-calendar-alt"></i><span>Events</span></a>
+                    <a class="sidebar__nav-item sidebar__nav-item--active" href="analytics.html" data-ripple><i class="fas fa-chart-bar"></i><span>Analytics</span></a>
+                </div>
+                <div class="sidebar__nav-group">
+                    <div class="sidebar__nav-group-title">Intelligence</div>
+                    <a class="sidebar__nav-item" href="recommendations.html" data-ripple><i class="fas fa-robot"></i><span>AI Recommendations</span></a>
+                    <a class="sidebar__nav-item" href="alerts.html" data-ripple><i class="fas fa-exclamation-circle"></i><span>Alerts</span></a>
+                    <a class="sidebar__nav-item" href="reports.html" data-ripple><i class="fas fa-file-alt"></i><span>Reports</span></a>
+                </div>
+                <div class="sidebar__nav-group">
+                    <div class="sidebar__nav-group-title">System</div>
+                    <a class="sidebar__nav-item" href="settings.html" data-ripple><i class="fas fa-cog"></i><span>Settings</span></a>
+                </div>
+                <div class="sidebar__status"><div class="sidebar__status-dot"></div><span>All Systems Operational</span></div>
+            </nav>
+            <div class="sidebar__footer">
+                <a class="sidebar__nav-item" href="../login.html" data-ripple><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="navbar">
+                <div class="navbar__left">
+                    <div class="navbar__breadcrumb">
+                        <i class="fas fa-brain" style="color: var(--primary-light);"></i>
+                        <span>Command Center</span><i class="fas fa-chevron-right"></i>Analytics
+                    </div>
+                </div>
+                <div class="navbar__search"><i class="fas fa-search"></i><input type="text" placeholder="Search analytics..."></div>
+                <div class="navbar__right">
+                    <button class="navbar__icon-btn" data-ripple><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+                    <div class="navbar__datetime"><span class="time" id="navbar-time">--:--:--</span><span class="date" id="navbar-date">---</span></div>
+                    <div class="navbar__profile"><div class="navbar__profile-avatar">AK</div><div class="navbar__profile-info"><span class="name">Amit Kumar</span><span class="role">City Admin</span></div></div>
+                </div>
+            </header>
+
+            <section class="dashboard">
+                <div class="page-header">
+                    <h2 class="page-header__title"><i class="fas fa-chart-bar"></i> Analytics & Insights</h2>
+                    <div class="page-header__actions">
+                        <button class="btn btn--outline btn--sm"><i class="fas fa-download"></i> Export Data</button>
+                        <button class="btn btn--primary btn--sm"><i class="fas fa-sync-alt"></i> Refresh</button>
+                    </div>
+                </div>
+
+                <div class="analytics-grid" id="analytics-grid">
+                    <div class="analytics-card animate-on-scroll">
+                        <div class="analytics-card__header"><h4><i class="fas fa-chart-line"></i> Crowd Trend (12 Months)</h4><span class="analytics-card__meta">Jan — Dec 2026</span></div>
+                        <div class="analytics-card__body"><canvas id="chart-trend12"></canvas></div>
+                    </div>
+                    <div class="analytics-card animate-on-scroll">
+                        <div class="analytics-card__header"><h4><i class="fas fa-chart-bar"></i> Monthly Crowd Comparison</h4><span class="analytics-card__meta">Current vs Previous Year</span></div>
+                        <div class="analytics-card__body"><canvas id="chart-monthly"></canvas></div>
+                    </div>
+                    <div class="analytics-card animate-on-scroll">
+                        <div class="analytics-card__header"><h4><i class="fas fa-shield-alt"></i> Risk Distribution</h4><span class="analytics-card__meta">All Zones</span></div>
+                        <div class="analytics-card__body"><canvas id="chart-risk"></canvas></div>
+                    </div>
+                    <div class="analytics-card animate-on-scroll">
+                        <div class="analytics-card__header"><h4><i class="fas fa-bullseye"></i> Prediction Accuracy</h4><span class="analytics-card__meta">AI Model Performance</span></div>
+                        <div class="analytics-card__body"><canvas id="chart-accuracy"></canvas></div>
+                    </div>
+                    <div class="analytics-card animate-on-scroll">
+                        <div class="analytics-card__header"><h4><i class="fas fa-cloud-sun"></i> Weather Impact</h4><span class="analytics-card__meta">Crowd vs Weather</span></div>
+                        <div class="analytics-card__body"><canvas id="chart-weather"></canvas></div>
+                    </div>
+                    <div class="analytics-card animate-on-scroll">
+                        <div class="analytics-card__header"><h4><i class="fas fa-clock"></i> Peak Crowd Hours</h4><span class="analytics-card__meta">Average Distribution</span></div>
+                        <div class="analytics-card__body"><canvas id="chart-peak"></canvas></div>
+                    </div>
+                    <div class="analytics-card animate-on-scroll">
+                        <div class="analytics-card__header"><h4><i class="fas fa-calendar-week"></i> Weekly Analysis</h4><span class="analytics-card__meta">Last 4 Weeks</span></div>
+                        <div class="analytics-card__body"><canvas id="chart-weekly"></canvas></div>
+                    </div>
+                    <div class="analytics-card animate-on-scroll">
+                        <div class="analytics-card__header"><h4><i class="fas fa-chart-area"></i> Daily Analysis</h4><span class="analytics-card__meta">Today's Pattern</span></div>
+                        <div class="analytics-card__body"><canvas id="chart-daily"></canvas></div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer__content">
+                    <div class="footer__logo"><i class="fas fa-brain"></i> CrowdSense AI</div>
+                    <div class="footer__divider"></div>
+                    <span class="footer__text">Version 1.0 &copy; 2026</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/authority-pages.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { Common.initPage(); AuthorityPages.initAnalytics(); });</script>
+</body>
+</html>
