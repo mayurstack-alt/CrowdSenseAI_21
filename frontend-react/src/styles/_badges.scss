@@ -1,0 +1,6 @@
+.badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: var(--radius-full); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.badge--success { background: var(--success-dim); color: var(--success); }
+.badge--warning { background: var(--warning-dim); color: var(--warning); }
+.badge--danger  { background: var(--danger-dim);  color: var(--danger); }
+.badge--primary { background: rgba(37,99,235,0.15); color: var(--primary-light); }
+.badge--critical { background: rgba(220,38,38,0.2); color: #FCA5A5; }

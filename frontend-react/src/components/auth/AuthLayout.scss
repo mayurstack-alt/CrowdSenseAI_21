@@ -1,0 +1,213 @@
+/* ═══════════════════════════════════════
+   AUTH PAGES (Login / Register)
+   ═══════════════════════════════════════ */
+
+.auth-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.auth-page__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-page__left::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.auth-page__left::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.auth-left__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 400px;
+}
+
+.auth-left__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.auth-left__logo-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(37,99,235,0.3);
+}
+
+.auth-left__logo-text {
+    font-size: 1.3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #F9FAFB, #3B82F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.auth-left__illustration {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 40px;
+    background: rgba(37,99,235,0.08);
+    border: 1px solid rgba(37,99,235,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.auth-left__illustration i {
+    font-size: 5rem;
+    color: rgba(37,99,235,0.4);
+}
+
+.auth-left__illustration::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    border: 1px dashed rgba(37,99,235,0.15);
+    border-radius: 50%;
+    animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.auth-left__illustration::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(124,58,237,0.1);
+    border-radius: 50%;
+}
+
+.auth-left__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #F9FAFB;
+}
+
+.auth-left__desc {
+    font-size: 0.875rem;
+    color: #6B7280;
+    line-height: 1.7;
+}
+
+.auth-page__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+    background: #111827;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.auth-card__header {
+    margin-bottom: 32px;
+}
+
+.auth-card__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #F9FAFB;
+}
+
+.auth-card__subtitle {
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+/* ─── Role Tabs ─── */
+.auth-role-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.auth-role-tab {
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 2px solid var(--border);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.auth-role-tab:hover {
+    border-color: rgba(37,99,235,0.3);
+    background: rgba(37,99,235,0.05);
+}
+
+.auth-role-tab.active {
+    border-color: #2563EB;
+    background: rgba(37,99,235,0.08);
+    box-shadow: 0 0 20px rgba(37,99,235,0.15);
+}
+
+.auth-role-tab__icon {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.auth-role-tab.active .auth-role-tab__icon {
+    color: #3B82F6;
+}
+
+.auth-role-tab__label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #9CA3AF;
+    display: block;
+}
+
+.auth-role-tab.active .auth-role-tab__label {
+    color: #F9FAFB;
+}
+

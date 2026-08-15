@@ -1,0 +1,182 @@
+/* ─── Form Groups ─── */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group__label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #9CA3AF;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.form-group__input-wrap {
+    position: relative;
+}
+
+.form-group__input-wrap i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6B7280;
+    font-size: 0.85rem;
+}
+
+.form-group__input {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: #F9FAFB;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.form-group__input:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.form-group__input::placeholder {
+    color: #6B7280;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: #9CA3AF;
+    cursor: pointer;
+}
+
+.form-check input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2563EB;
+    cursor: pointer;
+}
+
+.form-link {
+    font-size: 0.82rem;
+    color: #3B82F6;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.form-link:hover {
+    color: #60A5FA;
+}
+
+.auth-card__footer {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 0.85rem;
+    color: #6B7280;
+}
+
+.auth-card__footer a {
+    color: #3B82F6;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.auth-card__footer a:hover {
+    color: #60A5FA;
+}
+
+.btn--full {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    font-size: 0.95rem;
+}
+
+/* ─── Role Selector for Register ─── */
+.form-group__select {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: #F9FAFB;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236B7280' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+}
+
+.form-group__select:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.form-group__select option {
+    background: #1F2937;
+    color: #F9FAFB;
+}
+
+/* ─── Password Toggle ─── */
+.form-group__toggle-pw {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6B7280;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+}
+
+.form-group__toggle-pw:hover {
+    color: #9CA3AF;
+}
+
+/* ─── Demo Credentials Banner ─── */
+.demo-banner {
+    padding: 14px 16px;
+    background: rgba(37,99,235,0.08);
+    border: 1px solid rgba(37,99,235,0.2);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-size: 0.78rem;
+    color: #93C5FD;
+    line-height: 1.6;
+}
+
+.demo-banner strong {
+    color: #3B82F6;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.demo-banner code {
+    background: rgba(37,99,235,0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+}
+
+
