@@ -45,10 +45,8 @@ export default function Navbar({ breadcrumb, breadcrumbSub, role }) {
                     <span className="date">{date}</span>
                 </div>
                 <div className="navbar__profile">
-                    <div className="navbar__profile-avatar">{isAuthority ? 'AK' : 'RK'}</div>
+                    <div className="navbar__profile-avatar">{isAuthority ? 'MJ' : 'NV'}</div>
                     <div className="navbar__profile-info">
-                        <span className="name">{isAuthority ? 'Amit Kumar' : 'Rahul Kumar'}</span>
-                        <span className="role">{isAuthority ? 'City Admin' : 'Citizen'}</span>
                     </div>
                 </div>
             </div>
