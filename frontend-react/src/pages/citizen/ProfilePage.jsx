@@ -63,7 +63,17 @@ export default function ProfilePage() {
                             </div>
                             <div className="form-group">
                                 <label className="form-group__label" htmlFor="profile-email">Email</label>
-                                <input className="form-group__input profile-card__input" id="profile-email" name="email" type="email" value={profile.email} onChange={updateProfile} placeholder="Enter your email" />
+                                <input
+                                    className="form-group__input profile-card__input"
+                                    id="profile-email"
+                                    name="email"
+                                    type="email"
+                                    value={profile.email}
+                                    readOnly
+                                    disabled
+                                    aria-readonly="true"
+                                    placeholder="Enter your email"
+                                />
                             </div>
                             <div className="form-group">
                                 <label className="form-group__label" htmlFor="profile-phone">Phone</label>

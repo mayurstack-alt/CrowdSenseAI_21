@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
 export default function Navbar({ breadcrumb, breadcrumbSub, role }) {
@@ -18,6 +19,7 @@ export default function Navbar({ breadcrumb, breadcrumbSub, role }) {
     }, []);
 
     const isAuthority = role === 'authority';
+    const profilePath = isAuthority ? '/authority-dashboard/settings' : '/citizen-dashboard/profile';
 
     return (
         <header className="navbar">
@@ -46,7 +48,7 @@ export default function Navbar({ breadcrumb, breadcrumbSub, role }) {
                     <span className="time">{time}</span>
                     <span className="date">{date}</span>
                 </div>
-                <div className="navbar__profile">
+                <Link to={profilePath} className="navbar__profile" aria-label="Open profile page">
                     <div className="navbar__profile-avatar" title={user?.user_metadata?.full_name || user?.email || 'User'}>
                         {user?.user_metadata?.full_name 
                             ? user.user_metadata.full_name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() 
@@ -60,7 +62,7 @@ export default function Navbar({ breadcrumb, breadcrumbSub, role }) {
                             {user?.user_metadata?.role || role || 'Citizen'}
                         </span>
                     </div>
-                </div>
+                </Link>
             </div>
         </header>
     );
