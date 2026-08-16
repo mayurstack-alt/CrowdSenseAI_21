@@ -1,67 +1,111 @@
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 import { useAuth } from '../../context/AuthContext';
+import { useToast } from '../../components/common/Toast';
 import '../../components/pages/Pages.scss';
 
+const PREFERENCES = [
+    { id: 'pushNotifications', title: 'Push Notifications', description: 'Receive crowd updates on this device.' },
+    { id: 'emergencyAlerts', title: 'Emergency Alerts', description: 'Get critical safety alerts immediately.' },
+    { id: 'eventReminders', title: 'Event Reminders', description: 'Be notified before nearby events begin.' },
+    { id: 'darkMode', title: 'Dark Mode', description: 'Use the dark appearance across the portal.' }
+];
+
 export default function ProfilePage() {
-    const { user } = useAuth();
+    const { user, signOut } = useAuth();
+    const { showToast } = useToast();
+    const navigate = useNavigate();
+    const [profile, setProfile] = useState({ fullName: '', email: '', phone: '', city: 'Mumbai' });
+    const [preferences, setPreferences] = useState({
+        pushNotifications: true, emergencyAlerts: true, eventReminders: true, darkMode: true
+    });
+
+    useEffect(() => {
+        setProfile({
+            fullName: user?.user_metadata?.full_name || '',
+            email: user?.email || '',
+            phone: user?.user_metadata?.phone || '',
+            city: user?.user_metadata?.city || 'Mumbai'
+        });
+    }, [user]);
+
+    const updateProfile = (event) => setProfile((current) => ({ ...current, [event.target.name]: event.target.value }));
+
+    const handleLogout = async () => {
+        try {
+            await signOut();
+            navigate('/login', { replace: true });
+        } catch {
+            showToast('Unable to log out. Please try again.', 'error');
+        }
+    };
 
     return (
         <>
             <Navbar breadcrumb="Citizen Portal" breadcrumbSub="My Profile" role="citizen" />
-            <section className="dashboard">
+            <section className="dashboard citizen-page profile-page">
                 <div className="page-header">
                     <h2 className="page-header__title"><i className="fas fa-user"></i> My Profile</h2>
                 </div>
-                <div style={{ padding: '40px', background: 'var(--bg-secondary)', borderRadius: '12px', marginTop: '20px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '30px' }}>
-                        <div style={{ 
-                            width: '80px', 
-                            height: '80px', 
-                            borderRadius: '50%', 
-                            background: 'var(--primary-main)', 
-                            color: 'white', 
-                            display: 'flex', 
-                            alignItems: 'center', 
-                            justifyContent: 'center', 
-                            fontSize: '2rem', 
-                            fontWeight: 'bold',
-                            marginRight: '20px'
-                        }}>
-                            {user?.user_metadata?.full_name 
-                                ? user.user_metadata.full_name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() 
-                                : 'U'}
+
+                <div className="profile-grid">
+                    <section className="profile-card" aria-labelledby="user-details-heading">
+                        <header className="profile-card__header">
+                            <span className="profile-card__icon"><i className="fas fa-user"></i></span>
+                            <h3 id="user-details-heading">User Details</h3>
+                        </header>
+                        <div className="profile-card__body">
+                            <div className="form-group">
+                                <label className="form-group__label" htmlFor="profile-name">Full name</label>
+                                <input className="form-group__input profile-card__input" id="profile-name" name="fullName" value={profile.fullName} onChange={updateProfile} placeholder="Enter your full name" />
+                            </div>
+                            <div className="form-group">
+                                <label className="form-group__label" htmlFor="profile-email">Email</label>
+                                <input className="form-group__input profile-card__input" id="profile-email" name="email" type="email" value={profile.email} onChange={updateProfile} placeholder="Enter your email" />
+                            </div>
+                            <div className="form-group">
+                                <label className="form-group__label" htmlFor="profile-phone">Phone</label>
+                                <input className="form-group__input profile-card__input" id="profile-phone" name="phone" type="tel" value={profile.phone} onChange={updateProfile} placeholder="Enter your phone number" />
+                            </div>
+                            <div className="form-group profile-card__form-group--last">
+                                <label className="form-group__label" htmlFor="profile-city">City</label>
+                                <input className="form-group__input profile-card__input" id="profile-city" name="city" value={profile.city} onChange={updateProfile} placeholder="Enter your city" />
+                            </div>
                         </div>
-                        <div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '4px', color: 'var(--text-primary)', margin: 0 }}>
-                                {user?.user_metadata?.full_name || 'User'}
-                            </h3>
-                            <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', textTransform: 'capitalize' }}>
-                                {user?.user_metadata?.role || 'citizen'}
-                            </span>
+                    </section>
+
+                    <section className="profile-card" aria-labelledby="preferences-heading">
+                        <header className="profile-card__header">
+                            <span className="profile-card__icon"><i className="fas fa-sliders"></i></span>
+                            <h3 id="preferences-heading">Preferences</h3>
+                        </header>
+                        <div className="profile-card__body">
+                            <div className="preferences-list">
+                                {PREFERENCES.map((preference) => (
+                                    <label className="preference-row" htmlFor={preference.id} key={preference.id}>
+                                        <span className="preference-row__copy">
+                                            <strong>{preference.title}</strong>
+                                            <small>{preference.description}</small>
+                                        </span>
+                                        <span className="toggle">
+                                            <input
+                                                id={preference.id}
+                                                type="checkbox"
+                                                checked={preferences[preference.id]}
+                                                onChange={() => setPreferences((current) => ({ ...current, [preference.id]: !current[preference.id] }))}
+                                            />
+                                            <span className="toggle__slider"></span>
+                                        </span>
+                                    </label>
+                                ))}
+                            </div>
+                            <button className="btn btn--danger profile-card__logout" type="button" onClick={handleLogout}>
+                                <i className="fas fa-right-from-bracket"></i> Logout
+                            </button>
                         </div>
-                    </div>
-                    
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
-                        <div style={{ padding: '20px', background: 'var(--bg-primary)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                            <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', marginBottom: '8px', marginTop: 0 }}>Email Address</p>
-                            <p style={{ color: 'var(--text-primary)', fontSize: '1rem', fontWeight: 500, margin: 0 }}>{user?.email || 'Not provided'}</p>
-                        </div>
-                        <div style={{ padding: '20px', background: 'var(--bg-primary)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                            <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', marginBottom: '8px', marginTop: 0 }}>Phone Number</p>
-                            <p style={{ color: 'var(--text-primary)', fontSize: '1rem', fontWeight: 500, margin: 0 }}>{user?.user_metadata?.phone || 'Not provided'}</p>
-                        </div>
-                        <div style={{ padding: '20px', background: 'var(--bg-primary)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                            <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', marginBottom: '8px', marginTop: 0 }}>Account Created</p>
-                            <p style={{ color: 'var(--text-primary)', fontSize: '1rem', fontWeight: 500, margin: 0 }}>
-                                {user?.created_at ? new Date(user.created_at).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' }) : 'Unknown'}
-                            </p>
-                        </div>
-                        <div style={{ padding: '20px', background: 'var(--bg-primary)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                            <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', marginBottom: '8px', marginTop: 0 }}>Status</p>
-                            <p style={{ color: 'var(--success-main, #4caf50)', fontSize: '1rem', fontWeight: 500, margin: 0 }}><i className="fas fa-check-circle" style={{ marginRight: '8px' }}></i>Active</p>
-                        </div>
-                    </div>
+                    </section>
                 </div>
             </section>
             <Footer text="Citizen Portal · Version 1.0 © 2026" />

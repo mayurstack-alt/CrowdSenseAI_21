@@ -1,59 +1,93 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 
 const AuthContext = createContext(null);
+
+export const normalizeRole = (role) => {
+    const normalizedRole = String(role || 'citizen').trim().toLowerCase();
+    return normalizedRole === 'authority' || normalizedRole === 'admin' ? 'authority' : 'citizen';
+};
+
+export const getDashboardPath = (role) => (
+    normalizeRole(role) === 'authority' ? '/authority-dashboard' : '/citizen-dashboard'
+);
 
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [role, setRole] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        supabase.auth.getSession().then(({ data: { session } }) => {
-            if (session?.user) {
-                setUser(session.user);
-                setRole(session.user.user_metadata?.role || 'citizen');
-            }
-            setLoading(false);
-        });
-
-        const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-            if (session?.user) {
-                setUser(session.user);
-                setRole(session.user.user_metadata?.role || 'citizen');
-            } else {
-                setUser(null);
-                setRole(null);
-            }
-            setLoading(false);
-        });
-
-        return () => subscription.unsubscribe();
-    }, []);
-
-    const signIn = async (email, password, selectedRole) => {
-        const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) throw error;
-        setRole(selectedRole || data.user?.user_metadata?.role || 'citizen');
-        return data;
+    const applySession = (session) => {
+        const nextUser = session?.user || null;
+        setUser(nextUser);
+        setRole(nextUser ? normalizeRole(nextUser.user_metadata?.role) : null);
     };
 
-    const signUp = async (name, email, phone, password, selectedRole) => {
+    useEffect(() => {
+        let mounted = true;
+
+        const loadSession = async () => {
+            try {
+                const { data, error } = await supabase.auth.getSession();
+                if (error) throw error;
+                if (mounted) applySession(data.session);
+            } catch {
+                if (mounted) applySession(null);
+            } finally {
+                if (mounted) setLoading(false);
+            }
+        };
+
+        loadSession();
+
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+            if (!mounted) return;
+            applySession(session);
+            setLoading(false);
+        });
+
+        return () => {
+            mounted = false;
+            subscription.unsubscribe();
+        };
+    }, []);
+
+    const signIn = async (email, password) => {
+        const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+        if (error) throw error;
+
+        const authenticatedRole = normalizeRole(data.user?.user_metadata?.role);
+        setUser(data.user);
+        setRole(authenticatedRole);
+
+        return { ...data, role: authenticatedRole, redirectTo: getDashboardPath(authenticatedRole) };
+    };
+
+    const signUp = async (name, email, phone, password, selectedRole = 'citizen') => {
         const { data, error } = await supabase.auth.signUp({
             email,
             password,
             options: {
-                data: { full_name: name, phone, role: selectedRole }
+                data: {
+                    full_name: name,
+                    phone,
+                    role: normalizeRole(selectedRole)
+                }
             }
         });
         if (error) throw error;
-        return data;
+
+        return {
+            ...data,
+            role: normalizeRole(data.user?.user_metadata?.role || selectedRole),
+            redirectTo: getDashboardPath(data.user?.user_metadata?.role || selectedRole)
+        };
     };
 
     const signOut = async () => {
-        await supabase.auth.signOut();
-        setUser(null);
-        setRole(null);
+        const { error } = await supabase.auth.signOut();
+        if (error) throw error;
+        applySession(null);
     };
 
     return (
