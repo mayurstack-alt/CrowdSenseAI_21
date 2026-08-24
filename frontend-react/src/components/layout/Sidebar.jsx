@@ -63,10 +63,6 @@ export default function Sidebar({ role, isOpen, onClose }) {
                             ))}
                         </div>
                     ))}
-                    <div className="sidebar__status">
-                        <div className="sidebar__status-dot"></div>
-                        <span>All Systems Operational</span>
-                    </div>
                 </nav>
                 <div className="sidebar__footer">
                     <button className="sidebar__nav-item" onClick={signOut}>
