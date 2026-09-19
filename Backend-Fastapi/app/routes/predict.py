@@ -5,7 +5,8 @@ import os
 from datetime import datetime
 
 from app.schemas.prediction import PredictionRequest
-from app.services.ml_service import model, calculate_risk
+from app.services.ml_service import model
+from app.services.risk_service import calculate_risk
 from app.services.weather_service import get_current_weather
 
 
@@ -31,15 +32,12 @@ def predict_crowd(request: PredictionRequest):
     # Convert request data into a dictionary
     input_data = request.model_dump()
 
-    
-
     input_data["Day_of_Week"] = now.strftime("%A")
     input_data["Month"] = now.month
     input_data["Day"] = now.day
     input_data["Week_of_Year"] = now.isocalendar().week
     input_data["hour_sin"] = hour_sin
     input_data["hour_cos"] = hour_cos
-   
 
     input_data["Weather"] = weather["weather"]
     input_data["Temperature_C"] = weather["temperature"]
@@ -53,13 +51,14 @@ def predict_crowd(request: PredictionRequest):
     # Predict crowd count
     prediction = model.predict(input_df)[0]
 
-    # Get venue capacity
-    venue_capacity = request.Venue_Capacity
-
-    # Calculate risk
+    # Calculate risk using multi-factor scoring
     risk_result = calculate_risk(
-        prediction,
-        venue_capacity
+        predicted_crowd=prediction,
+        venue_capacity=request.Venue_Capacity,
+        weather_condition=weather["weather"],
+        event_type=request.Event_Type,
+        historical_incident_count=request.Historical_Incident_Count,
+        previous_overcrowding=request.Previous_Overcrowding,
     )
 
     return risk_result
