@@ -5,6 +5,7 @@ import os
 from datetime import datetime
 
 from app.schemas.prediction import PredictionRequest
+from app.services.holiday_service import is_public_holiday
 from app.services.ml_service import model
 from app.services.risk_service import calculate_risk
 from app.services.weather_service import get_current_weather
@@ -24,6 +25,7 @@ def predict_crowd(request: PredictionRequest):
     )
 
     now = datetime.now()
+    prediction_date = request.Prediction_Date or now.date()
 
     decimal_hour = now.hour + (now.minute / 60.0)
     hour_sin = np.sin(2 * np.pi * decimal_hour / 24.0)
@@ -32,10 +34,14 @@ def predict_crowd(request: PredictionRequest):
     # Convert request data into a dictionary
     input_data = request.model_dump()
 
-    input_data["Day_of_Week"] = now.strftime("%A")
-    input_data["Month"] = now.month
-    input_data["Day"] = now.day
-    input_data["Week_of_Year"] = now.isocalendar().week
+    input_data.pop("Prediction_Date")
+    input_data["Day_of_Week"] = prediction_date.strftime("%A")
+    input_data["Month"] = prediction_date.month
+    input_data["Day"] = prediction_date.day
+    input_data["Week_of_Year"] = prediction_date.isocalendar().week
+    input_data["Holiday"] = is_public_holiday(
+        weather["country"], prediction_date
+    )
     input_data["hour_sin"] = hour_sin
     input_data["hour_cos"] = hour_cos
 

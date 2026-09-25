@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from datetime import date
 from typing import Optional
 
 
@@ -18,7 +19,9 @@ class PredictionRequest(BaseModel):
     Wind_Speed_kmh: Optional[float] = None
 
     Day_of_Week: Optional[str] = None
-    Holiday: int
+    # Deprecated client input: the backend derives this from the venue country
+    # and Prediction_Date, but keeping it optional avoids breaking old clients.
+    Holiday: Optional[int] = None
     Event: str
     Event_Type: str
     Week_of_Year: Optional[int] = None
@@ -33,6 +36,8 @@ class PredictionRequest(BaseModel):
 
     Month: Optional[int] = None
     Day: Optional[int] = None
+
+    Prediction_Date: Optional[date] = None
 
     hour_sin: Optional[float] = None
     hour_cos: Optional[float] = None
