@@ -19,6 +19,7 @@ def get_current_weather(latitude, longitude, api_key):
     data = response.json()
 
     return {
+        "country": data.get("sys", {}).get("country"),
         "weather": data["weather"][0]["main"],
         "temperature": data["main"]["temp"],
         "humidity": data["main"]["humidity"],
