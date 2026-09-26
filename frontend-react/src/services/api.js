@@ -73,3 +73,38 @@ export async function getNearbyRisk() {
         throw error;
     }
 }
+
+export async function submitCrowdReport(report) {
+    try {
+        const response = await fetch(`${API_URL}/reports`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(report),
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`API Error: ${response.status} - ${errorText}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Crowd report submission failed:', error);
+        throw error;
+    }
+}
+
+export async function getReports() {
+    try {
+        const response = await fetch(`${API_URL}/reports`);
+        if (!response.ok) {
+            throw new Error(`API Error: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Reports API failed:', error);
+        throw error;
+    }
+}

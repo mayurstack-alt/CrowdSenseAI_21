@@ -3,13 +3,10 @@ import Footer from '../../components/layout/Footer';
 import AnimatedCounter from '../../components/common/AnimatedCounter';
 import ScrollAnimation from '../../components/common/ScrollAnimation';
 import { NavLink } from 'react-router-dom';
-import { kpiCards, alerts, mapMarkers, aiRecommendations, events } from '../../data/mockData';
+import { useEffect, useState } from 'react';
+import { getNearbyRisk } from '../../services/api';
 import '../../components/dashboard/Cards.scss';
 import '../../components/pages/Pages.scss';
-
-const previewAlerts = alerts.slice(0, 5);
-const previewRecommendations = aiRecommendations.items.slice(0, 2);
-const previewEvents = events.slice(0, 3);
 
 function riskBadgeClass(risk) {
     return risk === 'Critical' ? 'badge--critical' : risk === 'High' ? 'badge--danger' : risk === 'Medium' ? 'badge--warning' : 'badge--success';
@@ -22,6 +19,40 @@ function markerPosition(marker) {
 }
 
 export default function AuthorityDashboard() {
+    const [riskData, setRiskData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        getNearbyRisk()
+            .then((data) => setRiskData(data || []))
+            .catch((error) => console.error(error))
+            .finally(() => setLoading(false));
+    }, []);
+
+    const kpiCards = [
+        { id: 'current-crowd', icon: 'fa-users', title: 'Current Crowd', value: riskData.reduce((sum, item) => sum + (item.crowd || 0), 0), suffix: 'People', change: riskData.length ? 'Live backend' : 'No data', changeDir: 'up', color: 'var(--success)', bgGradient: 'linear-gradient(135deg, rgba(34,197,94,0.15) 0%, rgba(34,197,94,0.05) 100%)' },
+        { id: 'predicted-crowd', icon: 'fa-chart-line', title: 'Predicted Crowd', value: riskData[0]?.crowd || 0, suffix: 'People', change: 'Next 30 mins', changeDir: 'neutral', color: 'var(--primary)', bgGradient: 'linear-gradient(135deg, rgba(37,99,235,0.15) 0%, rgba(37,99,235,0.05) 100%)' },
+        { id: 'risk-level', icon: 'fa-exclamation-triangle', title: 'Risk Level', value: riskData[0]?.level || 'N/A', suffix: '', change: riskData[0] ? 'Elevated' : 'Waiting', changeDir: 'danger', color: 'var(--danger)', bgGradient: 'linear-gradient(135deg, rgba(239,68,68,0.15) 0%, rgba(239,68,68,0.05) 100%)' },
+        { id: 'weather', icon: 'fa-cloud-sun', title: 'Scanned Zones', value: riskData.length, suffix: 'Zones', change: riskData.length ? 'Updated live' : 'Offline', changeDir: 'neutral', color: 'var(--warning)', bgGradient: 'linear-gradient(135deg, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0.05) 100%)' },
+    ];
+
+    const previewAlerts = (riskData.length ? riskData : []).slice(0, 5).map((zone) => ({
+        time: `${zone.distance_km ?? 0} km`,
+        location: zone.name,
+        description: `${zone.capacity_utilization_pct ?? 0}% utilization`,
+        risk: zone.level,
+    }));
+
+    const previewRecommendations = [
+        { text: riskData[0]?.recommended_action || 'Monitor nearby areas and verify live conditions.', priority: 'high' },
+        { text: 'Review capacity thresholds and rapidly rising hotspots.', priority: 'medium' },
+    ];
+
+    const previewEvents = [
+        { name: 'Live risk scan', expectedVisitors: riskData.reduce((sum, item) => sum + (item.crowd || 0), 0), date: 'Current', status: 'Active' },
+        { name: 'Transit pattern check', expectedVisitors: Math.max(1200, riskData.length * 500), date: 'Next 30 mins', status: 'Upcoming' },
+    ];
+
     return (
         <>
             <Navbar breadcrumb="Command Center" breadcrumbSub="City Overview" role="authority" />
@@ -32,6 +63,8 @@ export default function AuthorityDashboard() {
                         <p className="dashboard-home-header__subtext">A quick read of current conditions across monitored zones.</p>
                     </div>
                 </div>
+
+                {loading ? <p>Loading live dashboard data...</p> : null}
 
                 <div className="kpi-grid">
                     {kpiCards.map((card, index) => (
@@ -59,7 +92,9 @@ export default function AuthorityDashboard() {
                             <div className="dashboard-map-preview__canvas" aria-label="Static preview of current crowd density zones">
                                 <div className="dashboard-map-preview__roads dashboard-map-preview__roads--one"></div>
                                 <div className="dashboard-map-preview__roads dashboard-map-preview__roads--two"></div>
-                                {mapMarkers.map(marker => <span key={marker.name} className="dashboard-map-preview__marker" title={`${marker.name}: ${marker.crowd.toLocaleString()} people`} style={{ ...markerPosition(marker), backgroundColor: marker.color }}></span>)}
+                                {(riskData.length ? riskData : []).map((marker) => (
+                                    <span key={marker.location_id} className="dashboard-map-preview__marker" title={`${marker.name}: ${marker.crowd.toLocaleString()} people`} style={{ ...markerPosition({ lat: marker.lat, lng: marker.lng }), backgroundColor: marker.color }}></span>
+                                ))}
                                 <span className="dashboard-map-preview__label dashboard-map-preview__label--north">North Mumbai</span>
                                 <span className="dashboard-map-preview__label dashboard-map-preview__label--south">South Mumbai</span>
                             </div>
@@ -73,7 +108,7 @@ export default function AuthorityDashboard() {
                                 <NavLink className="dashboard-view-all" to="/authority-dashboard/alerts">View All <i className="fas fa-arrow-right"></i></NavLink>
                             </div>
                             <div className="dashboard-preview-list">
-                                {previewAlerts.map(alert => (
+                                {previewAlerts.map((alert) => (
                                     <div className="dashboard-preview-row dashboard-preview-row--alert" key={`${alert.time}-${alert.location}`}>
                                         <div><strong>{alert.location}</strong><span>{alert.time} · {alert.description}</span></div>
                                         <span className={`badge ${riskBadgeClass(alert.risk)}`}>{alert.risk}</span>
@@ -106,7 +141,7 @@ export default function AuthorityDashboard() {
                                 <NavLink className="dashboard-view-all" to="/authority-dashboard/events">View All <i className="fas fa-arrow-right"></i></NavLink>
                             </div>
                             <div className="dashboard-preview-list">
-                                {previewEvents.map(event => (
+                                {previewEvents.map((event) => (
                                     <div className="dashboard-preview-row" key={event.name}>
                                         <div><strong>{event.name}</strong><span>{event.date} · {event.expectedVisitors.toLocaleString()} expected</span></div>
                                         <span className={`badge ${event.status === 'Active' ? 'badge--success' : 'badge--primary'}`}>{event.status}</span>
