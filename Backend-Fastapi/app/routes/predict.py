@@ -1,70 +1,89 @@
-from fastapi import APIRouter
-import pandas as pd
-import numpy as np
-import os
+from fastapi import APIRouter, HTTPException
+import traceback
 from datetime import datetime
 
-from app.schemas.prediction import PredictionRequest
-from app.services.holiday_service import is_public_holiday
+from app.schemas.prediction import PredictionRequest, PredictionResponse
+from app.services.feature_builder import build_features
 from app.services.ml_service import model
 from app.services.risk_service import calculate_risk
-from app.services.weather_service import get_current_weather
-
+from app.services.supabase_service import supabase
 
 router = APIRouter()
 
-
 @router.post("/predict")
 def predict_crowd(request: PredictionRequest):
-    api_key = os.getenv("OPENWEATHER_API_KEY")
+    try:
+        # Build exact 27-feature DataFrame
+        input_df, venue_capacity = build_features(request)
+        
+        # Predict crowd count
+        prediction = model.predict(input_df)[0]
+        
+        # Calculate risk using multi-factor scoring
+        historical_incident_count = int(input_df["Historical_Incident_Count"].iloc[0])
+        previous_overcrowding = int(input_df["Previous_Overcrowding"].iloc[0])
+        weather_condition = input_df["Weather"].iloc[0]
+        
+        risk_result = calculate_risk(
+            predicted_crowd=prediction,
+            venue_capacity=venue_capacity,
+            weather_condition=weather_condition,
+            event_type=request.event_type,
+            historical_incident_count=historical_incident_count,
+            previous_overcrowding=previous_overcrowding,
+        )
 
-    weather = get_current_weather(
-        request.Latitude,
-        request.Longitude,
-        api_key
-    )
+        return risk_result
+        
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        print(traceback.format_exc())
+        raise HTTPException(status_code=500, detail="Internal server error")
 
-    now = datetime.now()
-    prediction_date = request.Prediction_Date or now.date()
+@router.get("/risk/nearby")
+def get_nearby_risk(lat: float = 19.076, lon: float = 72.8777, radius_km: float = 10.0):
+    try:
+        locations_res = supabase.table("locations").select("*").execute()
+        locations = locations_res.data
+        if not locations:
+            return []
 
-    decimal_hour = now.hour + (now.minute / 60.0)
-    hour_sin = np.sin(2 * np.pi * decimal_hour / 24.0)
-    hour_cos = np.cos(2 * np.pi * decimal_hour / 24.0)
-
-    # Convert request data into a dictionary
-    input_data = request.model_dump()
-
-    input_data.pop("Prediction_Date")
-    input_data["Day_of_Week"] = prediction_date.strftime("%A")
-    input_data["Month"] = prediction_date.month
-    input_data["Day"] = prediction_date.day
-    input_data["Week_of_Year"] = prediction_date.isocalendar().week
-    input_data["Holiday"] = is_public_holiday(
-        weather["country"], prediction_date
-    )
-    input_data["hour_sin"] = hour_sin
-    input_data["hour_cos"] = hour_cos
-
-    input_data["Weather"] = weather["weather"]
-    input_data["Temperature_C"] = weather["temperature"]
-    input_data["Humidity_pct"] = weather["humidity"]
-    input_data["Rainfall_mm"] = weather["rainfall"]
-    input_data["Wind_Speed_kmh"] = weather["wind_speed"]
-
-    # Convert dictionary into DataFrame
-    input_df = pd.DataFrame([input_data])
-
-    # Predict crowd count
-    prediction = model.predict(input_df)[0]
-
-    # Calculate risk using multi-factor scoring
-    risk_result = calculate_risk(
-        predicted_crowd=prediction,
-        venue_capacity=request.Venue_Capacity,
-        weather_condition=weather["weather"],
-        event_type=request.Event_Type,
-        historical_incident_count=request.Historical_Incident_Count,
-        previous_overcrowding=request.Previous_Overcrowding,
-    )
-
-    return risk_result
+        results = []
+        for loc in locations:
+            # We skip distance filtering for simplicity unless we do Haversine
+            # Call prediction for each location
+            try:
+                req = PredictionRequest(location_id=loc["location_id"])
+                input_df, venue_capacity = build_features(req)
+                prediction = model.predict(input_df)[0]
+                risk = calculate_risk(
+                    predicted_crowd=prediction,
+                    venue_capacity=venue_capacity,
+                    weather_condition=input_df["Weather"].iloc[0],
+                    event_type=req.event_type,
+                    historical_incident_count=int(input_df["Historical_Incident_Count"].iloc[0]),
+                    previous_overcrowding=int(input_df["Previous_Overcrowding"].iloc[0]),
+                )
+                results.append({
+                    "location_id": loc["location_id"],
+                    "name": loc["place"],
+                    "city": loc["city"],
+                    "lat": loc["latitude"],
+                    "lng": loc["longitude"],
+                    "risk": risk["capacity_utilization_pct"],
+                    "level": risk["risk_level"],
+                    "crowd": risk["predicted_crowd"],
+                    "distance": "2.0 km", # mock distance
+                    "color": risk["alert_color_hex"]
+                })
+            except Exception as inner_e:
+                # skip locations that fail to predict
+                pass
+                
+        # Sort by risk descending
+        results.sort(key=lambda x: x["risk"], reverse=True)
+        return results[:10]
+    except Exception as e:
+        print(traceback.format_exc())
+        raise HTTPException(status_code=500, detail="Internal server error")

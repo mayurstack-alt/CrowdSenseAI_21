@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
+import { useState, useEffect } from 'react';
+import { getNearbyRisk } from '../../services/api';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Filler, Tooltip, Legend } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import Navbar from '../../components/layout/Navbar';
@@ -25,6 +27,21 @@ const trendData = {
 };
 
 export default function CitizenHome() {
+    const [mapMarkers, setMapMarkers] = useState([]);
+
+    useEffect(() => {
+        getNearbyRisk().then(data => {
+            const markers = data.map(d => ({
+                name: d.name,
+                lat: d.lat,
+                lng: d.lng,
+                crowd: d.crowd,
+                color: d.color
+            }));
+            setMapMarkers(markers);
+        }).catch(e => console.error(e));
+    }, []);
+
     return (
         <>
             <Navbar breadcrumb="Citizen Portal" breadcrumbSub="Home" role="citizen" />
@@ -82,7 +99,7 @@ export default function CitizenHome() {
                         <div className="citizen-map-card__header"><h3><i className="fas fa-map-marked-alt"></i> Nearby Crowd Map</h3></div>
                         <MapContainer center={[19.076, 72.8777]} zoom={12} zoomControl={false} style={{ height: '650px', width: '100%' }}>
                             <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" attribution="&copy; OSM &copy; CARTO" subdomains="abcd" maxZoom={19} />
-                            {citizenMapMarkers.map(m => (
+                            {mapMarkers.map(m => (
                                 <CircleMarker key={m.name} center={[m.lat, m.lng]} radius={10} fillColor={m.color} fillOpacity={0.7} color={m.color} weight={2}>
                                     <Popup className="crowd-popup" closeButton={false}>
                                         <div style={{ fontFamily: "'Inter', sans-serif", padding: '4px' }}>
