@@ -1,43 +1,19 @@
 from pydantic import BaseModel
-from datetime import date
 from typing import Optional
-
+from datetime import datetime
 
 class PredictionRequest(BaseModel):
+    location_id: str
+    venue_id: Optional[str] = None
+    event: str = "Regular Day"
+    event_type: str = "Regular"
+    requested_datetime: Optional[datetime] = None
 
-    City: str
-    Place: str
-    Latitude: float
-    Longitude: float
-    Venue_Capacity: int
-    Venue_Area_km2: float
-
-    Weather: Optional[str] = None
-    Temperature_C: Optional[float] = None
-    Humidity_pct: Optional[float] = None
-    Rainfall_mm: Optional[float] = None
-    Wind_Speed_kmh: Optional[float] = None
-
-    Day_of_Week: Optional[str] = None
-    # Deprecated client input: the backend derives this from the venue country
-    # and Prediction_Date, but keeping it optional avoids breaking old clients.
-    Holiday: Optional[int] = None
-    Event: str
-    Event_Type: str
-    Week_of_Year: Optional[int] = None
-    Special_Features: str
-    Transportation_Type: str
-    Peak_Hour: int
-
-    Historical_Average_Crowd: float
-    Historical_Peak_Crowd: float
-    Historical_Incident_Count: int
-    Previous_Overcrowding: int
-
-    Month: Optional[int] = None
-    Day: Optional[int] = None
-
-    Prediction_Date: Optional[date] = None
-
-    hour_sin: Optional[float] = None
-    hour_cos: Optional[float] = None
+class PredictionResponse(BaseModel):
+    predicted_crowd: int
+    venue_capacity: int
+    capacity_utilization_pct: float
+    risk_level: str
+    alert_color: str
+    recommended_action: str
+    dominant_factor: Optional[str] = None

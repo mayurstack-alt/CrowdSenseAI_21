@@ -1,16 +1,28 @@
+import { useState, useEffect } from 'react';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
+import { getNearbyRisk } from '../../services/api';
 import '../../components/pages/Pages.scss';
 
-const RISK_ZONES = [
-    { name: 'Marine Drive', risk: '92%', level: 'Critical', distance: '2.1 km', crowd: '3,800 people' },
-    { name: 'CST Station', risk: '88%', level: 'High', distance: '1.4 km', crowd: '3,200 people' },
-    { name: 'Dadar Station', risk: '72%', level: 'High', distance: '3.6 km', crowd: '2,700 people' },
-    { name: 'Juhu Beach', risk: '65%', level: 'Medium', distance: '5.2 km', crowd: '1,950 people' },
-    { name: 'Bandra Station', risk: '55%', level: 'Medium', distance: '4.1 km', crowd: '1,400 people' }
-];
-
 export default function NearbyRiskPage() {
+    const [riskZones, setRiskZones] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchRisk = async () => {
+            try {
+                const data = await getNearbyRisk();
+                setRiskZones(data);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchRisk();
+    }, []);
+
     return (
         <>
             <Navbar breadcrumb="Citizen Portal" breadcrumbSub="Nearby Risk Zones" role="citizen" />
@@ -18,17 +30,21 @@ export default function NearbyRiskPage() {
                 <div className="page-header">
                     <h2 className="page-header__title"><i className="fas fa-map-marker-alt"></i> Nearby Risk Zones</h2>
                 </div>
+                {loading && <p>Loading nearby risk zones...</p>}
+                {error && <p className="error-text">Failed to load: {error}</p>}
+                {!loading && !error && riskZones.length === 0 && <p>No risk zones found.</p>}
+                
                 <div className="risk-list" aria-label="Nearby crowd risk zones">
-                    {RISK_ZONES.map((zone) => (
-                        <article className="risk-item" key={zone.name}>
-                            <div className={`risk-item__indicator risk-item__indicator--${zone.level.toLowerCase()}`}>
-                                {zone.risk}
+                    {riskZones.map((zone) => (
+                        <article className="risk-item" key={zone.location_id}>
+                            <div className={`risk-item__indicator risk-item__indicator--${zone.level.toLowerCase()}`} style={{ backgroundColor: zone.color }}>
+                                {zone.risk}%
                             </div>
                             <div className="risk-item__info">
                                 <h3 className="risk-item__name">{zone.name}</h3>
                                 <div className="risk-item__detail">
                                     <span><i className="fas fa-arrow-up-right-from-square"></i> {zone.distance}</span>
-                                    <span><i className="fas fa-users"></i> {zone.crowd}</span>
+                                    <span><i className="fas fa-users"></i> {zone.crowd.toLocaleString()} people</span>
                                 </div>
                             </div>
                             <span className={`risk-item__badge risk-item__badge--${zone.level.toLowerCase()}`}>{zone.level}</span>
