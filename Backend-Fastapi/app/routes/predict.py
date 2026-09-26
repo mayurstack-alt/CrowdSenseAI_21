@@ -26,7 +26,14 @@ def _predict_for_location(location_id: str, event: str = "Regular Day", event_ty
         historical_incident_count=int(input_df["Historical_Incident_Count"].iloc[0]),
         previous_overcrowding=int(input_df["Previous_Overcrowding"].iloc[0]),
     )
-    return {"risk": risk, "input_df": input_df, "venue_capacity": venue_capacity}
+    return {
+        "location_id": location_id,
+        "weather": input_df["Weather"].iloc[0],
+        "risk": risk,
+        "input_df": input_df,
+        "venue_capacity": venue_capacity,
+        "predicted_crowd": prediction,
+    }
 
 
 @router.post("/predict")
@@ -44,7 +51,19 @@ def predict_crowd(request: PredictionRequest):
             previous_overcrowding=int(input_df["Previous_Overcrowding"].iloc[0]),
         )
 
-        return risk_result
+        return {
+            "location_id": request.location_id,
+            "predicted_crowd": int(round(float(risk_result["predicted_crowd"]))),
+            "capacity": int(venue_capacity),
+            "utilization": round(float(risk_result["capacity_utilization_pct"]), 2),
+            "risk_score": int(risk_result["risk_score"]),
+            "risk_level": risk_result["risk_level"],
+            "weather": input_df["Weather"].iloc[0],
+            "recommended_action": risk_result["recommended_action"],
+            "alert_color": risk_result.get("alert_color"),
+            "alert_color_hex": risk_result.get("alert_color_hex"),
+            "dominant_factor": risk_result.get("dominant_factor"),
+        }
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e)) from e
     except Exception:

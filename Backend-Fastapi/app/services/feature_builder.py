@@ -47,28 +47,41 @@ def _safe_int(value, default=0):
         return int(default)
 
 
-def _choose_deterministic_venue(venues, historical_data):
+def _select_prediction_venue(venues, historical_data, requested_venue_id=None):
     if not venues:
-        return []
+        raise ValueError(f"No venues found for location {requested_venue_id or 'this location'}.")
+
+    if requested_venue_id:
+        matches = [v for v in venues if str(v.get("venue_id") or "") == str(requested_venue_id)]
+        if not matches:
+            raise ValueError(f"Venue {requested_venue_id} not found for this location.")
+        return matches[0]
 
     if len(venues) == 1:
-        return venues
+        return venues[0]
 
-    scored_venues = []
-    for venue in venues:
-        venue_id = str(venue.get("venue_id") or "")
-        matching_history = [
-            item for item in historical_data if str(item.get("venue_id") or "") == venue_id
-        ]
-        score = (
-            len(matching_history),
-            _safe_float(venue.get("venue_capacity"), 0.0),
-            _safe_float(venue.get("venue_area_km2"), 0.0),
-            -ord(venue_id[0]) if venue_id else 0,
+    primary_candidates = [
+        venue for venue in venues
+        if any(
+            bool(venue.get(flag_name))
+            for flag_name in ("is_primary", "primary", "is_default", "default_venue")
         )
-        scored_venues.append((score, venue))
+    ]
+    if len(primary_candidates) == 1:
+        return primary_candidates[0]
+    if len(primary_candidates) > 1:
+        return sorted(primary_candidates, key=lambda v: str(v.get("venue_id") or ""))[0]
 
-    return [sorted(scored_venues, key=lambda item: (-item[0][0], -item[0][1], -item[0][2], item[0][3]))[0][1]]
+    historical_matches = [
+        venue for venue in venues
+        if any(str(entry.get("venue_id") or "") == str(venue.get("venue_id") or "") for entry in historical_data)
+    ]
+    if len(historical_matches) == 1:
+        return historical_matches[0]
+
+    raise ValueError(
+        "Multiple venues are available for this location. Please provide a venue_id to select the prediction venue."
+    )
 
 
 def build_features(request: PredictionRequest):
@@ -80,24 +93,16 @@ def build_features(request: PredictionRequest):
     venues = context.get("venues") or []
     historical_data = context.get("historical_data") or []
 
-    if request.venue_id:
-        selected_venues = [v for v in venues if str(v.get("venue_id")) == str(request.venue_id)]
-    else:
-        selected_venues = _choose_deterministic_venue(venues, historical_data)
-
-    if not selected_venues:
-        raise ValueError("No valid venues found for this location.")
-
-    selected_venues = sorted(selected_venues, key=lambda v: str(v.get("venue_id") or ""))
-    venue_ids = {str(v.get("venue_id")) for v in selected_venues}
+    selected_venue = _select_prediction_venue(venues, historical_data, request.venue_id)
+    selected_venue_id = str(selected_venue.get("venue_id") or "")
     relevant_history = [
-        entry for entry in historical_data if str(entry.get("venue_id") or "") in venue_ids
+        entry for entry in historical_data if str(entry.get("venue_id") or "") == selected_venue_id
     ]
 
-    venue_capacity = sum(_safe_float(v.get("venue_capacity"), 0.0) for v in selected_venues)
-    venue_area_km2 = sum(_safe_float(v.get("venue_area_km2"), 0.0) for v in selected_venues)
-    special_features = selected_venues[0].get("special_features") or "None"
-    transportation_type = selected_venues[0].get("transportation_type") or "Unknown"
+    venue_capacity = _safe_float(selected_venue.get("venue_capacity"), 0.0)
+    venue_area_km2 = _safe_float(selected_venue.get("venue_area_km2"), 0.0)
+    special_features = selected_venue.get("special_features") or "None"
+    transportation_type = selected_venue.get("transportation_type") or "Unknown"
 
     if relevant_history:
         avg_crowd = sum(_safe_float(h.get("historical_average_crowd"), 0.0) for h in relevant_history) / len(relevant_history)

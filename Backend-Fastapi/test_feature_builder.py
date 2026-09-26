@@ -4,7 +4,7 @@ from app.schemas.prediction import PredictionRequest
 from app.services.feature_builder import build_features, haversine_km
 
 
-def test_build_features_uses_deterministic_venue_and_exact_feature_contract(monkeypatch):
+def test_build_features_requires_explicit_venue_when_multiple_are_available(monkeypatch):
     fake_context = {
         "location": {
             "location_id": "loc-1",
@@ -74,9 +74,21 @@ def test_build_features_uses_deterministic_venue_and_exact_feature_contract(monk
     )
     monkeypatch.setenv("OPENWEATHER_API_KEY", "demo")
 
+    try:
+        build_features(
+            PredictionRequest(
+                location_id="loc-1",
+                requested_datetime=datetime(2026, 1, 5, 18, 30),
+            )
+        )
+        assert False, "Expected ValueError when multiple venues exist and no venue_id is supplied"
+    except ValueError as exc:
+        assert "venue_id" in str(exc)
+
     df, venue_capacity = build_features(
         PredictionRequest(
             location_id="loc-1",
+            venue_id="v-1",
             requested_datetime=datetime(2026, 1, 5, 18, 30),
         )
     )
