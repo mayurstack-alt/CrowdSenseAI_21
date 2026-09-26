@@ -1,0 +1,2073 @@
+{
+  "_v": 18,
+  "composerId": "d8ea6492-7ebb-45ca-a192-f278dcf524a3",
+  "richText": "{\"root\":{\"children\":[{\"children\":[],\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"format\":\"\",\"indent\":0,\"type\":\"root\",\"version\":1}}",
+  "hasLoaded": true,
+  "text": "",
+  "fullConversationHeadersOnly": [
+    {
+      "bubbleId": "267d9fca-5731-455d-97c7-bea784a21ec3",
+      "type": 1,
+      "grouping": {
+        "isRenderable": true,
+        "hasText": true,
+        "isShortPlainText": true,
+        "textPreview": "this plan from phase 6 is to be implemented , some of the phases ahead are already implemented",
+        "toolDisplayComputed": true
+      },
+      "contentHeightHint": 42,
+      "createdAt": "2026-09-26T09:49:34.726Z"
+    },
+    {
+      "bubbleId": "7f124b9f-0016-4260-b8f2-024dd8bd18c4",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:42.605Z",
+      "startedAtMs": 1790416182605
+    },
+    {
+      "bubbleId": "8c795a1a-2fb8-4607-8ed6-0c76ea1f352b",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "hasText": true,
+        "textPreview": "I'll find the Phase 6 plan and what's already implemented so we can implement only the remaining work.",
+        "isKeptFinalAiVisibleOutsideWorkedForGroup": true,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:42.608Z",
+      "startedAtMs": 1790416182608,
+      "contentHeightHint": 42
+    },
+    {
+      "bubbleId": "6874d608-fe93-4ac5-9286-2ffee5ca3c1e",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-73f9fff6-04af-4430-8fdd-4a0cc12c310d-0\nfc_596e7400-016b-9a3a-9ed1-e95a93f6bb8c_0",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:42.616Z",
+      "startedAtMs": 1790416182616,
+      "completedAtMs": 1790416187230
+    },
+    {
+      "bubbleId": "2d0c5a8d-8c2e-43d1-af60-2307689d5f87",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-73f9fff6-04af-4430-8fdd-4a0cc12c310d-1\nfc_596e7400-016b-9a3a-9ed1-e95a93f6bb8c_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:42.620Z",
+      "startedAtMs": 1790416182620,
+      "completedAtMs": 1790416187235
+    },
+    {
+      "bubbleId": "7f9c8256-e2b2-4fc4-b6d9-1bc079ca94d2",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 41,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-73f9fff6-04af-4430-8fdd-4a0cc12c310d-2\nfc_596e7400-016b-9a3a-9ed1-e95a93f6bb8c_2",
+        "isToolGroupable": true,
+        "toolCallCase": "grepToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:43.040Z",
+      "startedAtMs": 1790416183040,
+      "completedAtMs": 1790416187247
+    },
+    {
+      "bubbleId": "7411fe7b-2d26-4040-8423-b3b840afe5e8",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-73f9fff6-04af-4430-8fdd-4a0cc12c310d-3\nfc_596e7400-016b-9a3a-9ed1-e95a93f6bb8c_3",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:43.592Z",
+      "startedAtMs": 1790416183592,
+      "completedAtMs": 1790416188041
+    },
+    {
+      "bubbleId": "bd08b179-669e-4d30-bbe2-7006121232a8",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:50.591Z",
+      "startedAtMs": 1790416190591
+    },
+    {
+      "bubbleId": "c6bed5c9-1986-4318-a96c-447b5f87de3a",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 41,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-3af29e52-a6c0-4ff6-8bc0-5c2e83697a8e-4\nfc_b5b80bcb-b43b-9639-b216-16a003cad882_0",
+        "isToolGroupable": true,
+        "toolCallCase": "grepToolCall",
+        "toolDisplayPath": "C:\\Users\\Vaidya\\.cursor\\projects\\c-Users-Vaidya-OneDrive-Desktop-projects-CrowdSense\\agent-transcripts",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:50.593Z",
+      "startedAtMs": 1790416190593,
+      "completedAtMs": 1790416191239
+    },
+    {
+      "bubbleId": "9e6a7aec-eb53-4cd2-984c-ecc89dd76a4a",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "error",
+        "toolCallId": "call-3af29e52-a6c0-4ff6-8bc0-5c2e83697a8e-5\nfc_b5b80bcb-b43b-9639-b216-16a003cad882_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:50.597Z",
+      "startedAtMs": 1790416190597,
+      "completedAtMs": 1790416216927
+    },
+    {
+      "bubbleId": "8fae3315-e76f-4447-9fc6-036ee6cc2ce6",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-3af29e52-a6c0-4ff6-8bc0-5c2e83697a8e-6\nfc_b5b80bcb-b43b-9639-b216-16a003cad882_2",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:50.914Z",
+      "startedAtMs": 1790416190914,
+      "completedAtMs": 1790416194345
+    },
+    {
+      "bubbleId": "0d1a678f-5d7e-441a-bf11-b049a6561a91",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-3af29e52-a6c0-4ff6-8bc0-5c2e83697a8e-7\nfc_b5b80bcb-b43b-9639-b216-16a003cad882_3",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:49:51.308Z",
+      "startedAtMs": 1790416191308,
+      "completedAtMs": 1790416213127
+    },
+    {
+      "bubbleId": "39b724e1-08ca-473f-8005-430255884ae0",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 2,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:50:19.954Z",
+      "startedAtMs": 1790416219954
+    },
+    {
+      "bubbleId": "c0351769-bcfc-4cfd-b7ab-a7225dd8a19e",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "error",
+        "toolCallId": "call-7c809aac-b86a-4b64-b978-0e5677eabb0e-8\nfc_5d268e4d-26d7-980f-be0b-67661c1f35b6_0",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:50:19.958Z",
+      "startedAtMs": 1790416219958,
+      "completedAtMs": 1790416221870
+    },
+    {
+      "bubbleId": "800f4a9a-a97e-4bae-ac76-0ebaeadb0ab3",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "error",
+        "toolCallId": "call-7c809aac-b86a-4b64-b978-0e5677eabb0e-9\nfc_5d268e4d-26d7-980f-be0b-67661c1f35b6_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:50:19.963Z",
+      "startedAtMs": 1790416219963,
+      "completedAtMs": 1790416245458
+    },
+    {
+      "bubbleId": "460b8425-6b7f-44ab-ba53-5cddec08e945",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "error",
+        "toolCallId": "call-7c809aac-b86a-4b64-b978-0e5677eabb0e-10\nfc_5d268e4d-26d7-980f-be0b-67661c1f35b6_2",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:50:19.967Z",
+      "startedAtMs": 1790416219967,
+      "completedAtMs": 1790416221866
+    },
+    {
+      "bubbleId": "ea55fc45-e22a-43aa-afb5-ceebda6e1fc0",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 63,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-7c809aac-b86a-4b64-b978-0e5677eabb0e-11\nfc_5d268e4d-26d7-980f-be0b-67661c1f35b6_3",
+        "isToolGroupable": true,
+        "toolCallCase": "getMcpToolsToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:50:19.972Z",
+      "startedAtMs": 1790416219972,
+      "completedAtMs": 1790416220281
+    },
+    {
+      "bubbleId": "b3c32485-cb9c-42d6-b4f2-5d59f25f2c4d",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:50:47.162Z",
+      "startedAtMs": 1790416247162
+    },
+    {
+      "bubbleId": "e157bbdc-06b8-47b2-b36d-19d780217043",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-254fb81b-b196-49b0-8833-a4734e5e69ba-12\nfc_3f979206-a27d-911d-b2ef-bb7d4e5af477_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:50:47.167Z",
+      "startedAtMs": 1790416247167,
+      "completedAtMs": 1790416280632
+    },
+    {
+      "bubbleId": "5251bcda-1e7e-4b8d-aa4f-be0eb7139586",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-254fb81b-b196-49b0-8833-a4734e5e69ba-13\nfc_3f979206-a27d-911d-b2ef-bb7d4e5af477_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:50:47.361Z",
+      "startedAtMs": 1790416247361,
+      "completedAtMs": 1790416250703
+    },
+    {
+      "bubbleId": "29a9cc63-8353-4b88-a602-48d9073c1b26",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-254fb81b-b196-49b0-8833-a4734e5e69ba-14\nfc_3f979206-a27d-911d-b2ef-bb7d4e5af477_2",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:50:47.709Z",
+      "startedAtMs": 1790416247709,
+      "completedAtMs": 1790416250705
+    },
+    {
+      "bubbleId": "aa4279d1-a08b-4704-b79c-265d4fca76e1",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-254fb81b-b196-49b0-8833-a4734e5e69ba-15\nfc_3f979206-a27d-911d-b2ef-bb7d4e5af477_3",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:50:48.007Z",
+      "startedAtMs": 1790416248007,
+      "completedAtMs": 1790416250709
+    },
+    {
+      "bubbleId": "7bb9e5c8-169c-41a4-bfdc-e492402bdd4a",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:51:23.195Z",
+      "startedAtMs": 1790416283195
+    },
+    {
+      "bubbleId": "bf0ed2f0-771e-451c-88f1-ef45cd74e407",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-10243259-54f1-4407-81d8-9492ea1ad17a-16\nfc_2b682019-d7f8-933f-bcea-4cb2bb4b1d33_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:51:23.200Z",
+      "startedAtMs": 1790416283200,
+      "completedAtMs": 1790416296506
+    },
+    {
+      "bubbleId": "f28c29f4-2369-4f67-b4bc-f44b7ca8d1df",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-10243259-54f1-4407-81d8-9492ea1ad17a-17\nfc_2b682019-d7f8-933f-bcea-4cb2bb4b1d33_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:51:23.202Z",
+      "startedAtMs": 1790416283202,
+      "completedAtMs": 1790416284816
+    },
+    {
+      "bubbleId": "4a1f3e7e-62dd-4350-927c-ea6ae1daf7f4",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-10243259-54f1-4407-81d8-9492ea1ad17a-18\nfc_2b682019-d7f8-933f-bcea-4cb2bb4b1d33_2",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:51:23.206Z",
+      "startedAtMs": 1790416283206,
+      "completedAtMs": 1790416284905
+    },
+    {
+      "bubbleId": "ff27c076-2a79-4274-a2db-b77f36e0fa6d",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:51:39.177Z",
+      "startedAtMs": 1790416299177
+    },
+    {
+      "bubbleId": "2264b591-5682-48f3-88a1-83a82de80012",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-897bd407-d224-4b3e-aae4-d748d46fdbac-19\nfc_9fb31b9b-cc6c-9259-b47a-a0118bdcedc4_0",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:51:39.179Z",
+      "startedAtMs": 1790416299179,
+      "completedAtMs": 1790416300122
+    },
+    {
+      "bubbleId": "a5b89ff8-8027-4097-8351-d737139d3654",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 41,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-897bd407-d224-4b3e-aae4-d748d46fdbac-20\nfc_9fb31b9b-cc6c-9259-b47a-a0118bdcedc4_1",
+        "isToolGroupable": true,
+        "toolCallCase": "grepToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:51:39.183Z",
+      "startedAtMs": 1790416299183,
+      "completedAtMs": 1790416300089
+    },
+    {
+      "bubbleId": "bb14ff1b-e815-4f0c-be0c-8b1a5f367736",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-897bd407-d224-4b3e-aae4-d748d46fdbac-21\nfc_9fb31b9b-cc6c-9259-b47a-a0118bdcedc4_2",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:51:39.199Z",
+      "startedAtMs": 1790416299199,
+      "completedAtMs": 1790416334011
+    },
+    {
+      "bubbleId": "8e05f33c-1844-4ec2-a6da-88009732d647",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-897bd407-d224-4b3e-aae4-d748d46fdbac-22\nfc_9fb31b9b-cc6c-9259-b47a-a0118bdcedc4_3",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:51:39.475Z",
+      "startedAtMs": 1790416299475,
+      "completedAtMs": 1790416300092
+    },
+    {
+      "bubbleId": "7fdbc44e-d8d4-49d6-be23-b7f4d5b578a0",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:52:15.624Z",
+      "startedAtMs": 1790416335624
+    },
+    {
+      "bubbleId": "0ba24676-cec5-43ed-a7c1-02a2e95e21de",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 40,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-4ca40c58-cff0-44fe-be9f-bb9190a8d1c6-23\nfc_dc0ee649-4cb8-9808-be84-9c625d9601fa_0",
+        "isToolGroupable": true,
+        "toolCallCase": "readToolCall",
+        "toolDisplayPath": "C:\\Users\\Vaidya\\.cursor\\projects\\c-Users-Vaidya-OneDrive-Desktop-projects-CrowdSense\\agent-tools\\a4c51177-04b2-4f3b-95f4-b46a7606b708.txt",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:52:15.626Z",
+      "startedAtMs": 1790416335626,
+      "completedAtMs": 1790416339964
+    },
+    {
+      "bubbleId": "57757397-8d58-4ce5-a5d8-50132ef33735",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-4ca40c58-cff0-44fe-be9f-bb9190a8d1c6-24\nfc_dc0ee649-4cb8-9808-be84-9c625d9601fa_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:52:15.973Z",
+      "startedAtMs": 1790416335973,
+      "completedAtMs": 1790416340193
+    },
+    {
+      "bubbleId": "ba9be0fd-4cb3-48cd-abd1-3ff68ab1c727",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-4ca40c58-cff0-44fe-be9f-bb9190a8d1c6-25\nfc_dc0ee649-4cb8-9808-be84-9c625d9601fa_2",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:52:16.568Z",
+      "startedAtMs": 1790416336568,
+      "completedAtMs": 1790416357404
+    },
+    {
+      "bubbleId": "796c0ed8-4dfa-4573-b923-ab8f2d7b5db7",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 2648,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:52:39.809Z",
+      "startedAtMs": 1790416359809
+    },
+    {
+      "bubbleId": "407788de-ee16-46aa-8e1a-09656ed3607c",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "error",
+        "toolCallId": "call-74db823d-5909-4ffc-b22c-4ca929f02840-26\nfc_f7698712-77dd-9f27-8bd7-f06c522be2b5_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:52:42.461Z",
+      "startedAtMs": 1790416362461,
+      "completedAtMs": 1790416390239
+    },
+    {
+      "bubbleId": "06208af3-527d-4113-9f24-ce145814c8a1",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-74db823d-5909-4ffc-b22c-4ca929f02840-27\nfc_f7698712-77dd-9f27-8bd7-f06c522be2b5_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:52:42.520Z",
+      "startedAtMs": 1790416362520,
+      "completedAtMs": 1790416363695
+    },
+    {
+      "bubbleId": "75789311-8304-4a1f-bcea-9294688b0841",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-74db823d-5909-4ffc-b22c-4ca929f02840-28\nfc_f7698712-77dd-9f27-8bd7-f06c522be2b5_2",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:52:43.066Z",
+      "startedAtMs": 1790416363066,
+      "completedAtMs": 1790416363771
+    },
+    {
+      "bubbleId": "b6f80d42-ad36-4ca2-aa1a-8930903829bc",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "error",
+        "toolCallId": "call-74db823d-5909-4ffc-b22c-4ca929f02840-29\nfc_f7698712-77dd-9f27-8bd7-f06c522be2b5_3",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:52:43.434Z",
+      "startedAtMs": 1790416363434,
+      "completedAtMs": 1790416363763
+    },
+    {
+      "bubbleId": "1b2da98d-c59b-42ed-9aac-732f6849213d",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1512,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:11.734Z",
+      "startedAtMs": 1790416391734
+    },
+    {
+      "bubbleId": "b8b482c2-d379-4d3b-8f0b-f4d6454fd036",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-e779cc8a-5569-4f04-b7be-52be8728541b-30\nfc_3b905572-d048-9666-aed1-76103ef3121a_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:13.251Z",
+      "startedAtMs": 1790416393251,
+      "completedAtMs": 1790416420498
+    },
+    {
+      "bubbleId": "586621ae-5eef-4827-9ed8-fd4971cff18d",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-e779cc8a-5569-4f04-b7be-52be8728541b-31\nfc_3b905572-d048-9666-aed1-76103ef3121a_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:13.252Z",
+      "startedAtMs": 1790416393252,
+      "completedAtMs": 1790416394324
+    },
+    {
+      "bubbleId": "05ab3c92-a891-46c1-aa3c-7d32a0f852cd",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-e779cc8a-5569-4f04-b7be-52be8728541b-32\nfc_3b905572-d048-9666-aed1-76103ef3121a_2",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:13.255Z",
+      "startedAtMs": 1790416393255,
+      "completedAtMs": 1790416394358
+    },
+    {
+      "bubbleId": "481277aa-2b91-4e22-a30c-285c17c6e486",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-e779cc8a-5569-4f04-b7be-52be8728541b-33\nfc_3b905572-d048-9666-aed1-76103ef3121a_3",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:13.515Z",
+      "startedAtMs": 1790416393515,
+      "completedAtMs": 1790416396615
+    },
+    {
+      "bubbleId": "acd2c0cb-6548-4118-bb75-3c3ac72448b9",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:42.603Z",
+      "startedAtMs": 1790416422603
+    },
+    {
+      "bubbleId": "a3e02292-535d-4f50-8363-362ec12d4a60",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 41,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-4d655ee5-1f0d-4018-9c3d-07290d1a7c12-34\nfc_a15a7c45-d0e6-9a0e-b586-ec48b3f32c26_0",
+        "isToolGroupable": true,
+        "toolCallCase": "grepToolCall",
+        "toolDisplayPath": "C:\\Users\\Vaidya\\AppData\\Roaming\\Cursor\\User\\workspaceStorage",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:42.605Z",
+      "startedAtMs": 1790416422605,
+      "completedAtMs": 1790416424202
+    },
+    {
+      "bubbleId": "b9704f76-aef3-43e8-9e5f-1940a537a678",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 41,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-4d655ee5-1f0d-4018-9c3d-07290d1a7c12-35\nfc_a15a7c45-d0e6-9a0e-b586-ec48b3f32c26_1",
+        "isToolGroupable": true,
+        "toolCallCase": "grepToolCall",
+        "toolDisplayPath": "C:\\Users\\Vaidya\\AppData\\Roaming\\Cursor\\User\\workspaceStorage",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:42.608Z",
+      "startedAtMs": 1790416422608,
+      "completedAtMs": 1790416424051
+    },
+    {
+      "bubbleId": "890a9819-f889-49dd-bb01-c0deb7b6e485",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-4d655ee5-1f0d-4018-9c3d-07290d1a7c12-36\nfc_a15a7c45-d0e6-9a0e-b586-ec48b3f32c26_2",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:42.875Z",
+      "startedAtMs": 1790416422875,
+      "completedAtMs": 1790416424066
+    },
+    {
+      "bubbleId": "b57cb59b-afa0-4000-a24a-227dfe1dc758",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-4d655ee5-1f0d-4018-9c3d-07290d1a7c12-37\nfc_a15a7c45-d0e6-9a0e-b586-ec48b3f32c26_3",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:43.580Z",
+      "startedAtMs": 1790416423580,
+      "completedAtMs": 1790416424200
+    },
+    {
+      "bubbleId": "ed1714b8-205c-497d-8d99-691a79a0481c",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1736,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:45.858Z",
+      "startedAtMs": 1790416425858
+    },
+    {
+      "bubbleId": "e136d044-4852-4399-9714-96f1b9b12e66",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-3d1910e6-32f9-483d-9a99-6956b2756064-38\nfc_97481f92-8ea7-97a1-bfae-5c871afa7400_0",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:47.596Z",
+      "startedAtMs": 1790416427596,
+      "completedAtMs": 1790416428013
+    },
+    {
+      "bubbleId": "f9a24fc3-8905-4844-ae40-63fdaa4a0134",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 41,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-3d1910e6-32f9-483d-9a99-6956b2756064-39\nfc_97481f92-8ea7-97a1-bfae-5c871afa7400_1",
+        "isToolGroupable": true,
+        "toolCallCase": "grepToolCall",
+        "toolDisplayPath": "C:\\Users\\Vaidya\\AppData\\Roaming\\Cursor\\User",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:47.601Z",
+      "startedAtMs": 1790416427601,
+      "completedAtMs": 1790416428085
+    },
+    {
+      "bubbleId": "b7ae1d3d-9739-484e-bf7f-15cb540d3f81",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-3d1910e6-32f9-483d-9a99-6956b2756064-40\nfc_97481f92-8ea7-97a1-bfae-5c871afa7400_2",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:47.640Z",
+      "startedAtMs": 1790416427640,
+      "completedAtMs": 1790416428161
+    },
+    {
+      "bubbleId": "dd57387d-48f6-4ebf-bb53-bae3c420edb4",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 41,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-3d1910e6-32f9-483d-9a99-6956b2756064-41\nfc_97481f92-8ea7-97a1-bfae-5c871afa7400_3",
+        "isToolGroupable": true,
+        "toolCallCase": "grepToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:48.214Z",
+      "startedAtMs": 1790416428214,
+      "completedAtMs": 1790416429093
+    },
+    {
+      "bubbleId": "01859c4e-2639-4f9c-882d-fd49da69de36",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:51.580Z",
+      "startedAtMs": 1790416431580
+    },
+    {
+      "bubbleId": "a70c5777-4eb7-4b39-a082-37ac42b8eb4d",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 41,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-03a94ff5-b64a-4aee-88f4-2679ea80da36-42\nfc_c2a785a1-c898-9587-895c-4e0484b29c3f_0",
+        "isToolGroupable": true,
+        "toolCallCase": "grepToolCall",
+        "toolDisplayPath": "C:\\Users\\Vaidya\\.cursor\\projects\\c-Users-Vaidya-Downloads-sih26162-demo-prototype-main\\agent-transcripts",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:51.582Z",
+      "startedAtMs": 1790416431582,
+      "completedAtMs": 1790416431987
+    },
+    {
+      "bubbleId": "a8e69778-33b0-4eee-af59-3c8c43063de0",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-03a94ff5-b64a-4aee-88f4-2679ea80da36-43\nfc_c2a785a1-c898-9587-895c-4e0484b29c3f_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:51.586Z",
+      "startedAtMs": 1790416431586,
+      "completedAtMs": 1790416431984
+    },
+    {
+      "bubbleId": "cfba9fc9-26f8-4b22-bd24-069529f52d8d",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-03a94ff5-b64a-4aee-88f4-2679ea80da36-44\nfc_c2a785a1-c898-9587-895c-4e0484b29c3f_2",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:51.783Z",
+      "startedAtMs": 1790416431783,
+      "completedAtMs": 1790416446789
+    },
+    {
+      "bubbleId": "9df34a6e-28f9-4cc8-8c75-249742bb6f0e",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-03a94ff5-b64a-4aee-88f4-2679ea80da36-45\nfc_c2a785a1-c898-9587-895c-4e0484b29c3f_3",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:52.212Z",
+      "startedAtMs": 1790416432212,
+      "completedAtMs": 1790416432528
+    },
+    {
+      "bubbleId": "45dd5450-042e-4dc9-8282-0b6b2e533a5e",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-03a94ff5-b64a-4aee-88f4-2679ea80da36-46\nfc_c2a785a1-c898-9587-895c-4e0484b29c3f_4",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:53:52.570Z",
+      "startedAtMs": 1790416432570,
+      "completedAtMs": 1790416433039
+    },
+    {
+      "bubbleId": "071fbc81-9982-4635-a9af-4f7d9e491630",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1934,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:08.747Z",
+      "startedAtMs": 1790416448747
+    },
+    {
+      "bubbleId": "e6d39cd2-32d6-44b3-a001-cce18b58d2e9",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "error",
+        "toolCallId": "call-61d5ee8a-4996-49d6-ac67-0a6956384e9e-47\nfc_bc2fe03d-3bba-94fa-8e84-39d5fcc9be0f_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:10.685Z",
+      "startedAtMs": 1790416450685,
+      "completedAtMs": 1790416453443
+    },
+    {
+      "bubbleId": "4061f8d7-ff9c-4705-a4ee-79fa939bfb5e",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 41,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-61d5ee8a-4996-49d6-ac67-0a6956384e9e-48\nfc_bc2fe03d-3bba-94fa-8e84-39d5fcc9be0f_1",
+        "isToolGroupable": true,
+        "toolCallCase": "grepToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:10.687Z",
+      "startedAtMs": 1790416450687,
+      "completedAtMs": 1790416451105
+    },
+    {
+      "bubbleId": "d0954862-493a-49c3-89df-ff34fa0175ec",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "error",
+        "toolCallId": "call-61d5ee8a-4996-49d6-ac67-0a6956384e9e-49\nfc_bc2fe03d-3bba-94fa-8e84-39d5fcc9be0f_2",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:10.690Z",
+      "startedAtMs": 1790416450690,
+      "completedAtMs": 1790416451170
+    },
+    {
+      "bubbleId": "bbeb1b01-bcf7-4647-b898-0bee2cf07042",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-61d5ee8a-4996-49d6-ac67-0a6956384e9e-50\nfc_bc2fe03d-3bba-94fa-8e84-39d5fcc9be0f_3",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:10.857Z",
+      "startedAtMs": 1790416450857,
+      "completedAtMs": 1790416451172
+    },
+    {
+      "bubbleId": "9671789c-d0c1-482c-9ab3-46577f332f15",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1820,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:15.215Z",
+      "startedAtMs": 1790416455215
+    },
+    {
+      "bubbleId": "50dcc818-d760-4799-a71b-aeff72396d5e",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-968a6703-9c30-46c2-8dfa-4365ec403245-51\nfc_bf0a0b3c-8e76-9347-9080-a77961454b21_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:17.039Z",
+      "startedAtMs": 1790416457039,
+      "completedAtMs": 1790416468682
+    },
+    {
+      "bubbleId": "3ffe8a85-a33c-4ff5-a2f1-68a74d0563f2",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 40,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-968a6703-9c30-46c2-8dfa-4365ec403245-52\nfc_bf0a0b3c-8e76-9347-9080-a77961454b21_1",
+        "isToolGroupable": true,
+        "toolCallCase": "readToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\Backend-Fastapi\\app\\main.py",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:17.040Z",
+      "startedAtMs": 1790416457040,
+      "completedAtMs": 1790416457378
+    },
+    {
+      "bubbleId": "b3ed6dbb-3763-4fb5-a712-f4c6483ee8e1",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 40,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-968a6703-9c30-46c2-8dfa-4365ec403245-53\nfc_bf0a0b3c-8e76-9347-9080-a77961454b21_2",
+        "isToolGroupable": true,
+        "toolCallCase": "readToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\frontend-react\\src\\App.jsx",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:17.086Z",
+      "startedAtMs": 1790416457086,
+      "completedAtMs": 1790416457382
+    },
+    {
+      "bubbleId": "de3b4183-ab31-411c-b67a-d9f6ed09d822",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-968a6703-9c30-46c2-8dfa-4365ec403245-54\nfc_bf0a0b3c-8e76-9347-9080-a77961454b21_3",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:17.509Z",
+      "startedAtMs": 1790416457509,
+      "completedAtMs": 1790416458024
+    },
+    {
+      "bubbleId": "88f14696-aec1-4ff1-9401-a4b518e0ceff",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 3762,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:30.620Z",
+      "startedAtMs": 1790416470620
+    },
+    {
+      "bubbleId": "45116b29-4e65-407c-a9b4-09318eb9531d",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-42abb51c-9206-41fd-a461-7634fe827fe7-55\nfc_744bd52b-235c-96d1-bd5c-91d5034bfe43_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:34.386Z",
+      "startedAtMs": 1790416474386,
+      "completedAtMs": 1790416506850
+    },
+    {
+      "bubbleId": "509034fe-09ee-4427-8b2a-ae36b7375451",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "error",
+        "toolCallId": "call-42abb51c-9206-41fd-a461-7634fe827fe7-56\nfc_744bd52b-235c-96d1-bd5c-91d5034bfe43_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:34.387Z",
+      "startedAtMs": 1790416474387,
+      "completedAtMs": 1790416501027
+    },
+    {
+      "bubbleId": "c894bb35-5d9c-4a61-b1b4-d9c778eb6dee",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 40,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-42abb51c-9206-41fd-a461-7634fe827fe7-57\nfc_744bd52b-235c-96d1-bd5c-91d5034bfe43_2",
+        "isToolGroupable": true,
+        "toolCallCase": "readToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\Backend-Fastapi\\app\\routes\\locations.py",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:34.392Z",
+      "startedAtMs": 1790416474392,
+      "completedAtMs": 1790416474740
+    },
+    {
+      "bubbleId": "e3d2cb54-790e-4506-849c-4dfc9c8a6086",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 40,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-42abb51c-9206-41fd-a461-7634fe827fe7-58\nfc_744bd52b-235c-96d1-bd5c-91d5034bfe43_3",
+        "isToolGroupable": true,
+        "toolCallCase": "readToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\Backend-Fastapi\\app\\routes\\predict.py",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:54:34.402Z",
+      "startedAtMs": 1790416474402,
+      "completedAtMs": 1790416474746
+    },
+    {
+      "bubbleId": "9bda81a0-f0e2-4016-9202-65d20ff56397",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:55:11.024Z",
+      "startedAtMs": 1790416511024
+    },
+    {
+      "bubbleId": "a17dde52-a8ca-45a7-9e9b-56e270d2f547",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 57,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-219e136c-d26e-401f-963f-c5f52d2cf1c6-59\nfc_79c9a16f-fd43-9ed3-8af2-22672912e6b4_0",
+        "isToolGroupable": true,
+        "toolCallCase": "webFetchToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:55:11.026Z",
+      "startedAtMs": 1790416511026,
+      "completedAtMs": 1790416527711
+    },
+    {
+      "bubbleId": "d48f19cd-c61a-4e9f-811e-662b71445022",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 18,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-219e136c-d26e-401f-963f-c5f52d2cf1c6-60\nfc_79c9a16f-fd43-9ed3-8af2-22672912e6b4_1",
+        "isToolGroupable": true,
+        "toolCallCase": "webSearchToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:55:11.032Z",
+      "startedAtMs": 1790416511032,
+      "completedAtMs": 1790416547943
+    },
+    {
+      "bubbleId": "e0653996-7493-4547-8145-c9ca5b09f453",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-219e136c-d26e-401f-963f-c5f52d2cf1c6-61\nfc_79c9a16f-fd43-9ed3-8af2-22672912e6b4_2",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:55:11.152Z",
+      "startedAtMs": 1790416511152,
+      "completedAtMs": 1790416534587
+    },
+    {
+      "bubbleId": "117f4ee5-48f6-4424-850b-53bbd0f85101",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 40,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-219e136c-d26e-401f-963f-c5f52d2cf1c6-62\nfc_79c9a16f-fd43-9ed3-8af2-22672912e6b4_3",
+        "isToolGroupable": true,
+        "toolCallCase": "readToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\Backend-Fastapi\\app\\services\\location_service.py",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:55:11.499Z",
+      "startedAtMs": 1790416511499,
+      "completedAtMs": 1790416512511
+    },
+    {
+      "bubbleId": "c69792ef-3be0-4c2c-beaa-51bc9aec5b39",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 2772,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:55:51.644Z",
+      "startedAtMs": 1790416551644
+    },
+    {
+      "bubbleId": "cc59d553-5eb9-4719-a221-09f80cdf8255",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "error",
+        "toolCallId": "call-0383b4fb-3c07-43b7-a863-28e293457524-63\nfc_eae363d1-7b1d-93c6-a7f8-d833a2d447c1_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:55:54.421Z",
+      "startedAtMs": 1790416554421,
+      "completedAtMs": 1790416580066
+    },
+    {
+      "bubbleId": "c39e27f3-6659-40ab-a275-14661334932f",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 57,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-0383b4fb-3c07-43b7-a863-28e293457524-64\nfc_eae363d1-7b1d-93c6-a7f8-d833a2d447c1_1",
+        "isToolGroupable": true,
+        "toolCallCase": "webFetchToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:55:54.422Z",
+      "startedAtMs": 1790416554422,
+      "completedAtMs": 1790416560413
+    },
+    {
+      "bubbleId": "23fa5d4b-604a-4a9c-8e25-1105b5728d8f",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 41,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-0383b4fb-3c07-43b7-a863-28e293457524-65\nfc_eae363d1-7b1d-93c6-a7f8-d833a2d447c1_2",
+        "isToolGroupable": true,
+        "toolCallCase": "grepToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\frontend-react\\src",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:55:54.426Z",
+      "startedAtMs": 1790416554426,
+      "completedAtMs": 1790416555094
+    },
+    {
+      "bubbleId": "ce09a211-8f89-46de-8148-6046649ffd2a",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 40,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-0383b4fb-3c07-43b7-a863-28e293457524-66\nfc_eae363d1-7b1d-93c6-a7f8-d833a2d447c1_3",
+        "isToolGroupable": true,
+        "toolCallCase": "readToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\frontend-react\\src\\data\\mockData.js",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:55:54.777Z",
+      "startedAtMs": 1790416554777,
+      "completedAtMs": 1790416554991
+    },
+    {
+      "bubbleId": "47eb2833-5fe2-40a6-a226-b9e1eb551388",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 6837,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:56:22.543Z",
+      "startedAtMs": 1790416582543
+    },
+    {
+      "bubbleId": "5b6f8dac-211c-45dc-aac3-0f9308a5b8c8",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 38,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-39d4ad26-a812-4347-9fc5-65a37291a434-67\nfc_7f406751-dfee-9d4f-8f2b-dfe4575f76d3_0",
+        "toolCallCase": "editToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\_tmp_search_plans.py",
+        "editLinesAdded": 54,
+        "editLinesRemoved": 0,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:56:29.380Z",
+      "startedAtMs": 1790416589380,
+      "completedAtMs": 1790416590587
+    },
+    {
+      "bubbleId": "4f9d1f25-00ec-4cda-affe-ae3a1b9eadcf",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:56:32.530Z",
+      "startedAtMs": 1790416592530
+    },
+    {
+      "bubbleId": "fe713405-e7d3-4340-9045-b19be92a85aa",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-8b1e445f-7a5b-4101-becc-9f7bece30845-68\nfc_27a8d73e-a573-9d10-bf4a-2e02174ce7c1_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:56:32.535Z",
+      "startedAtMs": 1790416592535,
+      "completedAtMs": 1790416613314
+    },
+    {
+      "bubbleId": "8588df11-ed2a-4b09-b313-6b82294652d2",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 57,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-8b1e445f-7a5b-4101-becc-9f7bece30845-69\nfc_27a8d73e-a573-9d10-bf4a-2e02174ce7c1_1",
+        "isToolGroupable": true,
+        "toolCallCase": "webFetchToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:56:32.537Z",
+      "startedAtMs": 1790416592537,
+      "completedAtMs": 1790416606575
+    },
+    {
+      "bubbleId": "38abc594-081d-4900-9de4-b42a44a7c0e8",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 40,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-8b1e445f-7a5b-4101-becc-9f7bece30845-70\nfc_27a8d73e-a573-9d10-bf4a-2e02174ce7c1_2",
+        "isToolGroupable": true,
+        "toolCallCase": "readToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\Backend-Fastapi\\app\\schemas\\prediction.py",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:56:32.742Z",
+      "startedAtMs": 1790416592742,
+      "completedAtMs": 1790416594539
+    },
+    {
+      "bubbleId": "a57ded3f-56b7-43dd-a104-1694cd08aa92",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 40,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-8b1e445f-7a5b-4101-becc-9f7bece30845-71\nfc_27a8d73e-a573-9d10-bf4a-2e02174ce7c1_3",
+        "isToolGroupable": true,
+        "toolCallCase": "readToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\Backend-Fastapi\\app\\services\\risk_service.py",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:56:33.075Z",
+      "startedAtMs": 1790416593075,
+      "completedAtMs": 1790416594567
+    },
+    {
+      "bubbleId": "b870c2d1-414d-4272-9a7d-d3db02ad1b89",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:56:56.542Z",
+      "startedAtMs": 1790416616542
+    },
+    {
+      "bubbleId": "bace54fc-5177-463e-b548-a6087ac96546",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "hasText": true,
+        "textPreview": "I found the Phase 6",
+        "isKeptFinalAiVisibleOutsideWorkedForGroup": true,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:56:56.544Z",
+      "startedAtMs": 1790416616544,
+      "contentHeightHint": 42
+    },
+    {
+      "bubbleId": "0d50373d-1703-4573-a631-65a89c2e17a4",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 38,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-d5c887e9-98ad-4051-92b8-053e5a8d47a2-72\nfc_9df0b654-255c-9855-a0b8-a5ae81d21280_0",
+        "toolCallCase": "editToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\_tmp_search_plans2.py",
+        "editLinesAdded": 47,
+        "editLinesRemoved": 0,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:57:00.397Z",
+      "startedAtMs": 1790416620397,
+      "completedAtMs": 1790416620760
+    },
+    {
+      "bubbleId": "356ba555-673d-40d4-8b8e-5d5f76bdd68b",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:57:02.633Z",
+      "startedAtMs": 1790416622633
+    },
+    {
+      "bubbleId": "3fd3a03b-e6bc-447e-9d29-1119295cec0d",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-9cc4cd75-5bdd-4d9f-9dcf-360ea4ab1683-73\nfc_22ea9293-5d34-9e80-b4ff-178ca43bab5a_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:57:02.638Z",
+      "startedAtMs": 1790416622638,
+      "completedAtMs": 1790416648552
+    },
+    {
+      "bubbleId": "dfb44018-7bfb-435a-9710-ff5403a5078d",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:57:31.828Z",
+      "startedAtMs": 1790416651828
+    },
+    {
+      "bubbleId": "9f0b5bde-3d35-4f9a-aa05-a08298031cff",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-0e8f7b48-9a01-4bea-a843-92a0c0d1d1f3-74\nfc_6e1d2b44-a0c3-9bb9-b7fc-7a0ebb012a12_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:57:31.834Z",
+      "startedAtMs": 1790416651834,
+      "completedAtMs": 1790416693964
+    },
+    {
+      "bubbleId": "b77f3f83-b093-45d3-a61d-7193dd37e088",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "error",
+        "toolCallId": "call-0e8f7b48-9a01-4bea-a843-92a0c0d1d1f3-75\nfc_6e1d2b44-a0c3-9bb9-b7fc-7a0ebb012a12_1",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:57:31.836Z",
+      "startedAtMs": 1790416651836,
+      "completedAtMs": 1790416680710
+    },
+    {
+      "bubbleId": "6f6e14a5-6b7e-478d-95e4-d6a795f60707",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 42,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-0e8f7b48-9a01-4bea-a843-92a0c0d1d1f3-76\nfc_6e1d2b44-a0c3-9bb9-b7fc-7a0ebb012a12_2",
+        "isToolGroupable": true,
+        "toolCallCase": "globToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:57:31.839Z",
+      "startedAtMs": 1790416651839,
+      "completedAtMs": 1790416654695
+    },
+    {
+      "bubbleId": "568bf24c-d7ce-40c7-910e-7eb01ec7010f",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 10766,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:58:19.033Z",
+      "startedAtMs": 1790416699033
+    },
+    {
+      "bubbleId": "0d536bfb-de48-4e77-b670-b31c37e59ad7",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 38,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-d7859fed-080f-4698-a0f6-6a1f78229aea-77\nfc_12c29df3-1d6c-905c-bc09-2a5465d66c3d_0",
+        "toolCallCase": "editToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\_tmp_search_plans3.py",
+        "editLinesAdded": 51,
+        "editLinesRemoved": 0,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:58:29.800Z",
+      "startedAtMs": 1790416709800,
+      "completedAtMs": 1790416710524
+    },
+    {
+      "bubbleId": "684e11d0-d83a-48e6-a7c3-c8abdb1c3a63",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:58:32.851Z",
+      "startedAtMs": 1790416712851
+    },
+    {
+      "bubbleId": "8fd143d6-ecbc-46d1-9534-61f2f7b97877",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "completed",
+        "shellStatus": "success",
+        "toolCallId": "call-95829b22-8fdc-4050-963c-4b8795b91118-78\nfc_27a9486b-2572-94d3-9aeb-c68e073ff27e_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T09:58:32.856Z",
+      "startedAtMs": 1790416712856,
+      "completedAtMs": 1790416803166
+    },
+    {
+      "bubbleId": "05b6d3a2-4a9a-4f53-bb07-b840c18420ff",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 9870,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T10:00:05.849Z",
+      "startedAtMs": 1790416805849
+    },
+    {
+      "bubbleId": "04861b1f-9d51-4883-b48f-e50aee53b0dd",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 38,
+        "toolFormerStatus": "completed",
+        "toolCallId": "call-512c0084-6d4e-4f26-ad54-a87f74723b9b-79\nfc_32a972d1-726c-9e11-ab2e-31eccd14d68a_0",
+        "toolCallCase": "editToolCall",
+        "toolDisplayPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21\\_tmp_search_plans4.py",
+        "editLinesAdded": 67,
+        "editLinesRemoved": 0,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T10:00:15.721Z",
+      "startedAtMs": 1790416815721,
+      "completedAtMs": 1790416818046
+    },
+    {
+      "bubbleId": "23f4e7c0-e11d-4bbe-82d8-2d9c80bf462c",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 30,
+        "hasThinking": true,
+        "thinkingDurationMs": 1,
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T10:00:21.114Z",
+      "startedAtMs": 1790416821114
+    },
+    {
+      "bubbleId": "45389b19-5609-4dfc-a254-717eca6d572f",
+      "type": 2,
+      "grouping": {
+        "isRenderable": true,
+        "capabilityType": 15,
+        "toolFormerTool": 15,
+        "toolFormerStatus": "loading",
+        "shellStatus": "pending",
+        "toolCallId": "call-92d99407-2369-4728-86e4-2b509545f052-80\nfc_9835448a-b82b-9b5f-a7ee-3271b1b50a31_0",
+        "toolCallCase": "shellToolCall",
+        "toolDisplayComputed": true
+      },
+      "createdAt": "2026-09-26T10:00:21.119Z",
+      "startedAtMs": 1790416821119
+    }
+  ],
+  "conversationMap": {},
+  "status": "aborted",
+  "context": {
+    "composers": [],
+    "selectedCommits": [],
+    "selectedPullRequests": [],
+    "selectedImages": [],
+    "selectedDocuments": [],
+    "selectedVideos": [],
+    "folderSelections": [],
+    "fileSelections": [],
+    "selections": [],
+    "terminalSelections": [],
+    "selectedDocs": [],
+    "externalLinks": [],
+    "cursorRules": [],
+    "cursorCommands": [],
+    "gitPRDiffSelections": [],
+    "subagentSelections": [],
+    "browserSelections": [],
+    "extraContext": [],
+    "mentions": {
+      "composers": {},
+      "selectedCommits": {},
+      "selectedPullRequests": {},
+      "gitDiff": [],
+      "gitDiffFromBranchToMain": [],
+      "selectedImages": {},
+      "selectedDocuments": {},
+      "selectedVideos": {},
+      "folderSelections": {},
+      "fileSelections": {},
+      "terminalFiles": {},
+      "selections": {},
+      "terminalSelections": {},
+      "selectedDocs": {},
+      "externalLinks": {},
+      "diffHistory": [],
+      "cursorRules": {},
+      "cursorCommands": {},
+      "uiElementSelections": [],
+      "consoleLogs": [],
+      "ideEditorsState": [],
+      "gitPRDiffSelections": {},
+      "subagentSelections": {},
+      "browserSelections": {}
+    }
+  },
+  "generatingBubbleIds": [],
+  "chatGenerationUUID": "6ac07c2e-5849-414d-8218-834bbc204890",
+  "isReadingLongFile": false,
+  "codeBlockData": {},
+  "originalFileStates": {
+    "file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans.py": {
+      "firstEditBubbleId": "5b6f8dac-211c-45dc-aac3-0f9308a5b8c8",
+      "isNewlyCreated": true,
+      "newlyCreatedFolders": [],
+      "contentKey": "ofsContent:d8ea6492-7ebb-45ca-a192-f278dcf524a3:file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans.py"
+    },
+    "file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans2.py": {
+      "firstEditBubbleId": "0d50373d-1703-4573-a631-65a89c2e17a4",
+      "isNewlyCreated": true,
+      "newlyCreatedFolders": [],
+      "contentKey": "ofsContent:d8ea6492-7ebb-45ca-a192-f278dcf524a3:file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans2.py"
+    },
+    "file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans3.py": {
+      "firstEditBubbleId": "0d536bfb-de48-4e77-b670-b31c37e59ad7",
+      "isNewlyCreated": true,
+      "newlyCreatedFolders": [],
+      "contentKey": "ofsContent:d8ea6492-7ebb-45ca-a192-f278dcf524a3:file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans3.py"
+    },
+    "file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans4.py": {
+      "firstEditBubbleId": "04861b1f-9d51-4883-b48f-e50aee53b0dd",
+      "isNewlyCreated": true,
+      "newlyCreatedFolders": [],
+      "contentKey": "ofsContent:d8ea6492-7ebb-45ca-a192-f278dcf524a3:file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans4.py"
+    }
+  },
+  "newlyCreatedFiles": [
+    {
+      "uri": {
+        "$mid": 1,
+        "external": "file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans.py",
+        "path": "/c:/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans.py",
+        "scheme": "file"
+      }
+    },
+    {
+      "uri": {
+        "$mid": 1,
+        "external": "file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans2.py",
+        "path": "/c:/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans2.py",
+        "scheme": "file"
+      }
+    },
+    {
+      "uri": {
+        "$mid": 1,
+        "external": "file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans3.py",
+        "path": "/c:/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans3.py",
+        "scheme": "file"
+      }
+    },
+    {
+      "uri": {
+        "$mid": 1,
+        "external": "file:///c%3A/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans4.py",
+        "path": "/c:/Users/Vaidya/OneDrive/Desktop/projects/CrowdSense/CrowdSenseAI_21/_tmp_search_plans4.py",
+        "scheme": "file"
+      }
+    }
+  ],
+  "newlyCreatedFolders": [],
+  "lastUpdatedAt": 1790416174702,
+  "conversationCheckpointLastUpdatedAt": 1790416819969,
+  "createdAt": 1790415565204,
+  "hasChangedContext": true,
+  "activeTabsShouldBeReactive": true,
+  "capabilities": [
+    {
+      "type": 15,
+      "data": {
+        "bubbleDataMap": "{}"
+      }
+    },
+    {
+      "type": 19,
+      "data": {}
+    },
+    {
+      "type": 33,
+      "data": {}
+    },
+    {
+      "type": 32,
+      "data": {}
+    },
+    {
+      "type": 23,
+      "data": {}
+    },
+    {
+      "type": 16,
+      "data": {}
+    },
+    {
+      "type": 24,
+      "data": {}
+    },
+    {
+      "type": 21,
+      "data": {}
+    }
+  ],
+  "name": "Phase 6 implementation plan",
+  "isFileListExpanded": false,
+  "canvasPillCollapsed": false,
+  "browserChipManuallyDisabled": false,
+  "browserChipManuallyEnabled": false,
+  "unifiedMode": "agent",
+  "activeCustomMode": null,
+  "committedCustomMode": null,
+  "pendingExitedCustomMode": null,
+  "forceMode": "edit",
+  "usageData": {},
+  "contextUsagePercent": 27.575390625,
+  "contextTokensUsed": 70593,
+  "contextTokenLimit": 256000,
+  "promptTokenBreakdown": {
+    "totalUsedTokens": 70593,
+    "maxTokens": 256000,
+    "categories": [
+      {
+        "id": "system_prompt",
+        "label": "System prompt",
+        "estimatedTokens": 1055
+      },
+      {
+        "id": "tools",
+        "label": "Tool definitions",
+        "estimatedTokens": 9522
+      },
+      {
+        "id": "rules",
+        "label": "Rules",
+        "estimatedTokens": 2001
+      },
+      {
+        "id": "skills",
+        "label": "Skills",
+        "estimatedTokens": 3741
+      },
+      {
+        "id": "mcp",
+        "label": "MCP & dynamic tools",
+        "estimatedTokens": 633
+      },
+      {
+        "id": "subagents",
+        "label": "Subagent definitions",
+        "estimatedTokens": 861
+      },
+      {
+        "id": "summarized_conversation",
+        "label": "Summarized conversation",
+        "estimatedTokens": 0
+      },
+      {
+        "id": "conversation",
+        "label": "Conversation",
+        "estimatedTokens": 52780
+      }
+    ]
+  },
+  "allAttachedFileCodeChunksUris": [],
+  "modelConfig": {
+    "modelName": "grok-4.6",
+    "maxMode": false,
+    "selectedModels": [
+      {
+        "modelId": "grok-4.6",
+        "parameters": [
+          {
+            "id": "effort",
+            "value": "medium"
+          },
+          {
+            "id": "fast",
+            "value": "false"
+          }
+        ]
+      }
+    ]
+  },
+  "subComposerIds": [],
+  "subagentComposerIds": [],
+  "capabilityContexts": [],
+  "todos": [],
+  "isQueueExpanded": true,
+  "hasUnreadMessages": false,
+  "gitHubPromptDismissed": false,
+  "totalLinesAdded": 223,
+  "totalLinesRemoved": 0,
+  "addedFiles": 0,
+  "removedFiles": 0,
+  "isDraft": false,
+  "isCreatingWorktree": false,
+  "isApplyingWorktree": false,
+  "isUndoingWorktree": false,
+  "applied": false,
+  "pendingCreateWorktree": false,
+  "worktreeStartedReadOnly": false,
+  "isBestOfNSubcomposer": false,
+  "isBestOfNParent": false,
+  "isSpec": false,
+  "isProject": false,
+  "isSpecSubagentDone": false,
+  "isContinuationInProgress": false,
+  "stopHookLoopCount": 0,
+  "trackedGitRepos": [
+    {
+      "repoPath": "c:\\Users\\Vaidya\\OneDrive\\Desktop\\projects\\CrowdSense\\CrowdSenseAI_21",
+      "branches": [
+        {
+          "branchName": "backend-integration",
+          "lastInteractionAt": 1790416816454
+        }
+      ]
+    }
+  ],
+  "speculativeSummarizationEncryptionKey": "68lC+OimC4pKTRdFBtAZvm9AA5bPetrS3vCHKCca8+Q=",
+  "isNAL": true,
+  "planModeSuggestionUsed": false,
+  "debugModeSuggestionUsed": false,
+  "conversationState": "~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+sLNggogpHOUuop0ULSZ9DfOccJxh/yoQ83ivCQJK6vVHwzc1KIKIJR61jDicZHXJGYAPZHlXForoa7sHYZ3Lpewr4eu0WA6IsMLeyJpZCI6IjEiLCJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6W3sidHlwZSI6InJlYXNvbmluZyIsInRleHQiOiIiLCJzaWduYXR1cmUiOiI2QjFSN1BwejlZS1E0LV9zZHJyU0Zwd0pqczQ2QkNDUGxWaU5pX3o3UmtCUmsyUWdXbS1QLXhwS2hHeW1uTks5bG9sRGVOLWhyNHlqdi1YODN5R0FYdU5lLU53ME1qb1dzenBkNmtLZUkxTDhjT1RUZDQxbUw0VVUyZ3o2eURGaW5qREJLQ2hkYWRJX3Y4T295NTlSa3FkY1NFRXlmNXNLcG5laFloYld2WGlCc1owQTZfMGtwaEVvZHREaWljMVpiczBZWEJzRUN5eXJ5SGpxeGkzUmtBMFA5WURUYTE5Q3ZHejRQQ2dGZjVtMjdPMm80N2otTGZzM0prT3RsaUczTGk3ckgxRS1qMC1udHFyaEJTcEg0Rl84SG9jdGViS0RLT3Z2WlI0MFl3S01Lck9kYmlacjcxdWxraTM5czZRaG5WV2pPSWFYWWdsRGR6cDl2WTBTdHNMZ0VTMnRXdWJMaDJJIiwicHJvdmlkZXJPcHRpb25zIjp7ImN1cnNvciI6eyJtb2RlbE5hbWUiOiJjdXJzb3ItZ3Jvay00LjYtbWVkaXVtIn19fSx7InR5cGUiOiJ0b29sLWNhbGwiLCJ0b29sQ2FsbElkIjoiY2FsbC05MmQ5OTQwNy0yMzY5LTQ3MjgtODZlNC0yYjUwOTU0NWYwNTItODBcbmZjXzk4MzU0NDhhLWI4MmItOWI1Zi1hN2VlLTMyNzFiMWI1MGEzMV8wIiwidG9vbE5hbWUiOiJTaGVsbCIsImFyZ3MiOnsiY29tbWFuZCI6InB5dGhvbiBfdG1wX3NlYXJjaF9wbGFuczQucHkiLCJkZXNjcmlwdGlvbiI6IkV4dHJhY3QgY29tcG9zZXIgY29udmVyc2F0aW9uIGFuZCB1c2VyIHBsYW4iLCJ3b3JraW5nX2RpcmVjdG9yeSI6ImM6XFxVc2Vyc1xcVmFpZHlhXFxPbmVEcml2ZVxcRGVza3RvcFxccHJvamVjdHNcXENyb3dkU2Vuc2VcXENyb3dkU2Vuc2VBSV8yMSJ9fV0sInByb3ZpZGVyT3B0aW9ucyI6eyJjdXJzb3IiOnsicGVuZGluZ1Rvb2xDYWxsU3RhcnRlZEF0TXMiOjE3OTA0MTY4MjEyMzIsInBlbmRpbmdUb29sRXhlY3V0aW9uQ29udHJhY3RzIjp7ImNhbGwtOTJkOTk0MDctMjM2OS00NzI4LTg2ZTQtMmI1MDk1NDVmMDUyLTgwXG5mY185ODM1NDQ4YS1iODJiLTliNWYtYTdlZS0zMjcxYjFiNTBhMzFfMCI6eyJ0b29sQ2FsbElkIjoiY2FsbC05MmQ5OTQwNy0yMzY5LTQ3MjgtODZlNC0yYjUwOTU0NWYwNTItODBcbmZjXzk4MzU0NDhhLWI4MmItOWI1Zi1hN2VlLTMyNzFiMWI1MGEzMV8wIiwib3V0ZXJUb29sTmFtZSI6IlNoZWxsIiwidG9vbElkZW50aWZpZXIiOiJTSEVMTCIsImlzRHluYW1pYyI6ZmFsc2UsImFsbG93ZWRUb29sTmFtZXMiOlsiU2hlbGwiLCJHcmVwIiwiRGVsZXRlIiwiV2ViU2VhcmNoIiwiV2ViRmV0Y2giLCJSZWFkTGludHMiLCJFZGl0Tm90ZWJvb2siLCJUb2RvV3JpdGUiLCJTdHJSZXBsYWNlIiwiV3JpdGUiLCJSZWFkIiwiR2xvYiIsIkFza1F1ZXN0aW9uIiwiVGFzayIsIkF3YWl0U2hlbGwiLCJHZXREeW5hbWljVG9vbHMiLCJGZXRjaE1jcFJlc291cmNlIiwiU3dpdGNoTW9kZSIsIkNhbGxEeW5hbWljVG9vbCJdfX19fX0qCAjBpwQQgNAPQiAIobwFs3+EaLMHNzgwWZ0xWSFWAqf6/FAqBbvOcbMnLUpbZmlsZTovLy9hcHAvYmFja2VuZC9zZXJ2ZXIvYzolNUNVc2VycyU1Q1ZhaWR5YSU1Q09uZURyaXZlJTVDRGVza3RvcCU1Q3Byb2plY3RzJTVDQ3Jvd2RTZW5zZVABeoABClpjOlxVc2Vyc1xWYWlkeWFcT25lRHJpdmVcRGVza3RvcFxwcm9qZWN0c1xDcm93ZFNlbnNlXENyb3dkU2Vuc2VBSV8yMVxfdG1wX3NlYXJjaF9wbGFuczQucHkSIgogj4ez1N5LxTEXUTE0OpYp/PBoNlbRxBs/TvfQnhkeX9B6gAEKWmM6XFVzZXJzXFZhaWR5YVxPbmVEcml2ZVxEZXNrdG9wXHByb2plY3RzXENyb3dkU2Vuc2VcQ3Jvd2RTZW5zZUFJXzIxXF90bXBfc2VhcmNoX3BsYW5zMy5weRIiCiCJi6nJemJsfbA0LOsxfUMBLDbFDyNe4gNUMW5/iaJ1NHqAAQpaYzpcVXNlcnNcVmFpZHlhXE9uZURyaXZlXERlc2t0b3BccHJvamVjdHNcQ3Jvd2RTZW5zZVxDcm93ZFNlbnNlQUlfMjFcX3RtcF9zZWFyY2hfcGxhbnMyLnB5EiIKIO0+0vSQ26ZiX1DGVMd+ywhReYbeVvJJoRejWqskS/T/en8KWWM6XFVzZXJzXFZhaWR5YVxPbmVEcml2ZVxEZXNrdG9wXHByb2plY3RzXENyb3dkU2Vuc2VcQ3Jvd2RTZW5zZUFJXzIxXF90bXBfc2VhcmNoX3BsYW5zLnB5EiIKICg1LJ67M+M/rWYVuotHunIag149Ll+Od7UFj6egii5SkgGJAUM6XFVzZXJzXFZhaWR5YVwuY3Vyc29yXHByb2plY3RzXGMtVXNlcnMtVmFpZHlhLU9uZURyaXZlLURlc2t0b3AtcHJvamVjdHMtQ3Jvd2RTZW5zZVxhZ2VudC10b29sc1xhNGM1MTE3Ny0wNGIyLTRmM2ItOTVmNC1iNDZhNzYwNmI3MDgudHh0kgFgYzpcVXNlcnNcVmFpZHlhXE9uZURyaXZlXERlc2t0b3BccHJvamVjdHNcQ3Jvd2RTZW5zZVxDcm93ZFNlbnNlQUlfMjFcQmFja2VuZC1GYXN0YXBpXGFwcFxtYWluLnB5kgFfYzpcVXNlcnNcVmFpZHlhXE9uZURyaXZlXERlc2t0b3BccHJvamVjdHNcQ3Jvd2RTZW5zZVxDcm93ZFNlbnNlQUlfMjFcZnJvbnRlbmQtcmVhY3Rcc3JjXEFwcC5qc3iSAWxjOlxVc2Vyc1xWYWlkeWFcT25lRHJpdmVcRGVza3RvcFxwcm9qZWN0c1xDcm93ZFNlbnNlXENyb3dkU2Vuc2VBSV8yMVxCYWNrZW5kLUZhc3RhcGlcYXBwXHJvdXRlc1xsb2NhdGlvbnMucHmSAWpjOlxVc2Vyc1xWYWlkeWFcT25lRHJpdmVcRGVza3RvcFxwcm9qZWN0c1xDcm93ZFNlbnNlXENyb3dkU2Vuc2VBSV8yMVxCYWNrZW5kLUZhc3RhcGlcYXBwXHJvdXRlc1xwcmVkaWN0LnB5kgF1YzpcVXNlcnNcVmFpZHlhXE9uZURyaXZlXERlc2t0b3BccHJvamVjdHNcQ3Jvd2RTZW5zZVxDcm93ZFNlbnNlQUlfMjFcQmFja2VuZC1GYXN0YXBpXGFwcFxzZXJ2aWNlc1xsb2NhdGlvbl9zZXJ2aWNlLnB5kgFoYzpcVXNlcnNcVmFpZHlhXE9uZURyaXZlXERlc2t0b3BccHJvamVjdHNcQ3Jvd2RTZW5zZVxDcm93ZFNlbnNlQUlfMjFcZnJvbnRlbmQtcmVhY3Rcc3JjXGRhdGFcbW9ja0RhdGEuanOSAW5jOlxVc2Vyc1xWYWlkeWFcT25lRHJpdmVcRGVza3RvcFxwcm9qZWN0c1xDcm93ZFNlbnNlXENyb3dkU2Vuc2VBSV8yMVxCYWNrZW5kLUZhc3RhcGlcYXBwXHNjaGVtYXNccHJlZGljdGlvbi5weZIBcWM6XFVzZXJzXFZhaWR5YVxPbmVEcml2ZVxEZXNrdG9wXHByb2plY3RzXENyb3dkU2Vuc2VcQ3Jvd2RTZW5zZUFJXzIxXEJhY2tlbmQtRmFzdGFwaVxhcHBcc2VydmljZXNccmlza19zZXJ2aWNlLnB5sgEDaWRl0AGZovvojTTaAQ1Bc2lhL0NhbGN1dHRh",
+  "queueItems": [],
+  "blobEncryptionKey": "IlrxfytXbZajACqI6G0+uobDzGPbfbuNAkViWeJuiFI=",
+  "unfinishedRunAt": 1790416174702,
+  "latestChatGenerationUUID": "6ac07c2e-5849-414d-8218-834bbc204890",
+  "isAgentic": true,
+  "subtitle": "Edited _tmp_search_plans4.py, _tmp_search_plans3.py, _tmp_search_plans2.py, _tmp_search_plans.py",
+  "filesChangedCount": 4
+}
