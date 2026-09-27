@@ -1,8 +1,9 @@
-from app.services.supabase_service import supabase
+from app.services.supabase_service import get_supabase_client
 
 
 def get_location_context(location_id: str):
-    # 1. Get location
+    supabase = get_supabase_client()
+
     location_response = (
         supabase
         .table("locations")
@@ -17,7 +18,6 @@ def get_location_context(location_id: str):
     if not location:
         return None
 
-    # 2. Get all venue profiles for this location
     venue_response = (
         supabase
         .table("venues")
@@ -28,7 +28,6 @@ def get_location_context(location_id: str):
 
     venues = venue_response.data or []
 
-    # 3. Get all historical records for this location
     historical_response = (
         supabase
         .table("historical_data")
@@ -42,5 +41,5 @@ def get_location_context(location_id: str):
     return {
         "location": location,
         "venues": venues,
-        "historical_data": historical_data
+        "historical_data": historical_data,
     }

@@ -9,6 +9,7 @@ from app.routes import health
 from app.routes import predict
 from app.routes import weather
 from app.routes import locations
+from app.routes import reports
 
 app = FastAPI()
 
@@ -30,3 +31,4 @@ app.include_router(health.router)
 app.include_router(predict.router)
 app.include_router(weather.router)
 app.include_router(locations.router)
+app.include_router(reports.router)
